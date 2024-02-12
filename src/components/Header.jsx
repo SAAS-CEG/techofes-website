@@ -12,8 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+// import {index} from './../assets/index'
 
-const pages = ['Events', 'Workshops', 'Sponsors','Contact'];
+// const pages = [{menu:'Events',link:'events'},{menu:'Workshops',link:'workshops'},{menu:'Sponsors',link:'sponsors'},{menu:'Contact',link:'contact'}];
+const pages = ['workshop','event','sponsors']
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
 function Header() {
@@ -40,6 +42,7 @@ function Header() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+          {/* <img src={index.T77_logojpg} className='w-10'/> */}
           <Typography
             variant="h6"
             noWrap
