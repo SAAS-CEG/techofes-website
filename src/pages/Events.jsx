@@ -3,18 +3,23 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { eventRegistrationDetails } from '../constants/constants';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import RegistrationModal from '../components/RegisterModal';
+// import { useState } from 'react';
+// import { useState } from 'react';
 
 const Events = () => {
-	const navigate = useNavigate();
-
-	const registerEvent = (e) => {
-		const eventId = e.target.id;
-		navigate(`/events/${eventId}`);
-	};
+	// const [open, setOpen] = useState(false);
+	// const [event, setEvent] = useState();
+	// const handleRegister = (e) => {
+	// 	setOpen(true);
+	// 	setEvent({
+	// 		id: e.target.id,
+	// 	});
+	// };
 	return (
 		<div className="w-full">
 			<Header />
@@ -23,19 +28,15 @@ const Events = () => {
 					{eventRegistrationDetails.map((event) => {
 						return (
 							<Card sx={{ maxWidth: 345 }} key={event.id}>
-								<CardMedia component="img" alt="green iguana" className="w-20 h-60" image={event.image} />
+								<CardMedia component="img" alt="green iguana" className="w-full h-60" image={event.image} />
 								<CardContent>
 									<Typography gutterBottom variant="h5" component="div">
 										{event.eventName}
 									</Typography>
-									<Typography variant="body2" color="text.secondary">
-										{event.description}
-									</Typography>
+									<Typography color="text.secondary">{event.description}</Typography>
 								</CardContent>
 								<CardActions className="w-full flex justify-center hover:bg-blue-600 hover:cursor-pointer">
-									<Button id={event.id} size="small" className="w-full hover:text-white" onClick={(e) => registerEvent(e)}>
-										Register
-									</Button>
+									<RegistrationModal event={event} />
 								</CardActions>
 							</Card>
 						);
