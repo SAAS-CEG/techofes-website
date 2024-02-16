@@ -5,12 +5,12 @@ import Sponsors from './pages/Sponsors';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import Registration from './pages/Registration';
-// import Header from './components/Header';
+import Header from './components/Header';
 
 const App = () => {
 	return (
 		<BrowserRouter>
-			{/* <Header /> */}
+			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/events" element={<Events />} />

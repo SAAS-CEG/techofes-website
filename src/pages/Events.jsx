@@ -1,17 +1,15 @@
-import Header from '../components/Header';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { eventRegistrationDetails } from '../constants/constants';
-import RegistrationModal from '../components/RegisterModal';
+// import Card from '@mui/material/Card';
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Typography from '@mui/material/Typography';
+// import { eventRegistrationDetails } from '../constants/constants';
+// import RegistrationModal from '../components/RegisterModal';
 import FlipCard from '../components/FlipCard';
 
 const Events = () => {
 	return (
 		<div className="w-full">
-			<Header />
 			<div className="w-full flex justify-center my-20 items-center">
 				<div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-x-14 gap-y-20">
 					{/* {eventRegistrationDetails.map((event) => {

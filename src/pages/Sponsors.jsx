@@ -1,9 +1,12 @@
-const Sponsors = () => {
-  return (
-    <div>
-      Sponsors
-    </div>
-  )
-}
+import Card from '../components/Card';
 
-export default Sponsors
+const Sponsors = () => {
+	return (
+		<div>
+			Our Sponsors
+			<Card />
+		</div>
+	);
+};
+
+export default Sponsors;

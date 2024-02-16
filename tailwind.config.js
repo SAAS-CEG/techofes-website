@@ -21,7 +21,7 @@ const Myclass = plugin(function ({ addUtilities }) {
 export default {
 	mode: 'jit',
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-	// important: '#root',
+	important: '#root',
 	theme: {
 		extend: {},
 	},

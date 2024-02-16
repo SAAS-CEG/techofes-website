@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { pages, settings } from './../constants/constants';
+import { Link } from 'react-router-dom';
 
 // const pages = [{menu:'Events',link:'events'},{menu:'Workshops',link:'workshops'},{menu:'Sponsors',link:'sponsors'},{menu:'Contact',link:'contact'}];
 
@@ -36,7 +37,7 @@ function Header() {
 	};
 
 	return (
-		<AppBar position="static">
+		<AppBar position="static" className="w-screen top-0">
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -56,7 +57,7 @@ function Header() {
 							textDecoration: 'none',
 						}}
 					>
-						TECHOFES
+						<Link to="/">TECHOFES</Link>
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -84,7 +85,7 @@ function Header() {
 							{pages.map((page) => (
 								<MenuItem key={page.id} onClick={handleCloseNavMenu}>
 									<Typography textAlign="center">
-										<a href={page.link}>{page.name}</a>
+										<Link to={page.link}>{page.name}</Link>
 									</Typography>
 								</MenuItem>
 							))}
@@ -112,7 +113,7 @@ function Header() {
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map((page) => (
 							<Button key={page.id} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-								<a href={page.link}>{page.name}</a>
+								<Link to={page.link}>{page.name}</Link>
 							</Button>
 						))}
 					</Box>
