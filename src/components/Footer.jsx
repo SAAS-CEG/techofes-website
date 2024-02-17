@@ -1,60 +1,79 @@
-import React from "react";
+// import React from 'react';
 import "./Footer.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="body">
-      <div className="Footer">
-        <div className="waves">
-          <div className="wave1"></div>
-          <div className="wave2"></div>
-          <div className="wave3"></div>
-          <div className="wave4"></div>
-        </div>
-        <ul className="social-icon">
+    <div className="hero_area relative">
+      <svg
+        className="absolute waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shapeRendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g className="parallax">
+          <use xlinkHref="#gentle-wave" x="48" y="0" fill="#192485" />
+          <use xlinkHref="#gentle-wave" x="48" y="3" fill="#64B5F6" />
+          <use xlinkHref="#gentle-wave" x="48" y="5" fill="#1976D2" />
+          <use xlinkHref="#gentle-wave" x="48" y="7" fill="#0D47A1" />
+        </g>
+      </svg>
+
+      <div className="absolute flex w-full flex-col justify-center items-center gap-y-2 ">
+        <ul className="social-icon flex gap-x-4">
           <li>
-            <a href="#">
+            <Link to="#">
               {" "}
               <LinkedInIcon />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="#">
               {" "}
               <FacebookIcon />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="#">
               {" "}
               <InstagramIcon />
-            </a>
+            </Link>
           </li>
         </ul>
-        <ul className="menu">
+        <ul className="menu flex gap-x-4">
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="#">About</Link>
           </li>
           <li>
-            <a href="#">Events</a>
+            <Link to="#">Events</Link>
           </li>
           <li>
-            <a href="#">Sponsors</a>
+            <Link to="#">Sponsors</Link>
           </li>
           <li>
-            <a href="#">Team</a>
+            <Link to="#">Team</Link>
           </li>
         </ul>
-        © TECHOFES_2024 Copyright:
-        <a className="text-blue" href="https://Techofes24.com/">
-          SAAS
-        </a>
+        <div className="flex">
+          <p>© TECHOFES_2024 Copyright:</p>
+          <Link className="text-blue" href="https://Techofes24.com/">
+            SAAS
+          </Link>
+        </div>
       </div>
     </div>
   );

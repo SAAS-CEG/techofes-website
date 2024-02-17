@@ -4,11 +4,11 @@ import { CSSTransitionGroup } from "react-transition-group";
 import ReactDOM from "react-dom";
 
 import "./maincaro.scss";
-import img3 from "../assets/img3.jpeg";
-import img4 from "../assets/img4.jpeg";
-import img5 from "../assets/img5.jpeg";
-import img6 from "../assets/img6.jpg";
-import img7 from "../assets/img7.jpeg";
+// import img3 from "../assets/img3.jpeg";
+// import img4 from "../assets/img4.jpeg";
+// import img5 from "../assets/img5.jpeg";
+// import img6 from "../assets/img6.jpg";
+// import img7 from "../assets/img7.jpeg";
 
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
