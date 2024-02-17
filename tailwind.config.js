@@ -1,12 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<<<< Temporary merge branch 1
-export default {
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
-=========
 const plugin = require('tailwindcss/plugin');
 
 const Myclass = plugin(function ({ addUtilities }) {
@@ -40,5 +32,4 @@ export default {
 		},
 	},
 	plugins: [Myclass],
->>>>>>>>> Temporary merge branch 2
 };

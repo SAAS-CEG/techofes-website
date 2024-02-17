@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
-import { img1 } from "../assets/index";
-import { img2 } from "../assets/index";
+import img1 from "../assets/index";
+import img2 from "../assets/index";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PublicIcon from "@mui/icons-material/Public";
 const Card = () => {

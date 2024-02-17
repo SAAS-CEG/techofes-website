@@ -1,14 +1,3 @@
-<<<<<<<<< Temporary merge branch 1
-const Contact = () => {
-  return (
-    <div>
-      Contact
-    </div>
-  )
-}
-
-export default Contact
-=========
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 
@@ -69,4 +58,3 @@ const Contact = () => {
 };
 
 export default Contact;
->>>>>>>>> Temporary merge branch 2

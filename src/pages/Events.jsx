@@ -60,3 +60,5 @@ const Events = () => {
       <Footer />
     </div>
   );
+     }
+     export default Events;

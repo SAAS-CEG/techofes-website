@@ -1,4 +1,4 @@
-<<<<<<<<< Temporary merge branch 1
+
 import Card from "../components/Card";
 const Sponsors = () => {
 	return (
