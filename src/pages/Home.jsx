@@ -1,7 +1,6 @@
-import About from '../components/About';
-import CelebrityCard from '../components/CelebrityCard';
-import Slider from '../components/Slider.jsx';
-// import { Title } from '../components/Title';
+import About from '../components/about/About';
+import CelebrityCard from '../components/celebrityCard/CelebrityCard';
+import Slider from '../components/mainCarousel/Slider.jsx';
 import RevolveCarousel from '../components/revolveCarousel/revolveCarousel';
 
 const Home = () => {

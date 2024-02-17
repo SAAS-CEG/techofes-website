@@ -8,7 +8,7 @@ import Registration from './pages/Registration';
 
 import Header from './components/Header';
 import Merchandise from './pages/Merchandise';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 
 const App = () => {
 	return (

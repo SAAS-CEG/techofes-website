@@ -1,12 +1,5 @@
-
-import Card from "../components/Card";
 const Sponsors = () => {
-	return (
-		<div>
-			Our Sponsors
-			<Card />
-		</div>
-	);
+	return <div>Our Sponsors</div>;
 };
 
 export default Sponsors;
