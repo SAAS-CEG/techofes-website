@@ -27,7 +27,7 @@
 	height: 300px;
 }
 
-.pic-ctn > img {
+.pic-ctn > div {
 	position: absolute;
 	/* top: 20px;
 	left: calc(50% - 100px); */
@@ -35,15 +35,15 @@
 	animation: display 10s infinite;
 }
 
-img:nth-child(2) {
+div:nth-child(2) {
 	animation-delay: 2s;
 }
-img:nth-child(3) {
+div:nth-child(3) {
 	animation-delay: 4s;
 }
-img:nth-child(4) {
+div:nth-child(4) {
 	animation-delay: 6s;
 }
-img:nth-child(5) {
+div:nth-child(5) {
 	animation-delay: 8s;
 }

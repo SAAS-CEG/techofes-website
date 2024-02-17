@@ -1,10 +1,12 @@
+// import { Title } from '../components/Title';
 import RevolveCarousel from '../components/revolveCarousel/revolveCarousel';
 
 const Home = () => {
 	return (
 		<div>
 			<div className="min-h-screen flex justify-center items-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center">
-				<h1 className="font-black text-6xl">Parallax</h1>
+				<h1 className="font-black text-6xl">TECHOFES</h1>
+				{/* <Title /> */}
 			</div>
 
 			{/* <div className="p-10">
@@ -15,9 +17,8 @@ const Home = () => {
 				</p>
 			</div> */}
 
-			<div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed">
-				<RevolveCarousel />
-			</div>
+			<div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div>
+			<RevolveCarousel />
 
 			<div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover"></div>
 		</div>

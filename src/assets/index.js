@@ -4,5 +4,6 @@ import img1 from './img1.jpg';
 import img2 from './img2.jpg';
 import concertNight from './concertNight1.jpg';
 import djNight from './djNight.jpg';
+import concertNightSmall from './concertNight-small.jpg';
 
-export { T77_logojpg, T77_logopng, img1, img2, concertNight, djNight };
+export { T77_logojpg, T77_logopng, img1, img2, concertNight, djNight, concertNightSmall };
