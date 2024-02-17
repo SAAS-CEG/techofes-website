@@ -1,5 +1,9 @@
-import React, { useState, useRef } from "react";
-import "./maincaro.css";
+import React, { useState } from "react";
+import { CSSTransitionGroup } from "react-transition-group";
+
+import ReactDOM from "react-dom";
+
+import "./maincaro.scss";
 import img3 from "../assets/img3.jpeg";
 import img4 from "../assets/img4.jpeg";
 import img5 from "../assets/img5.jpeg";
@@ -10,82 +14,61 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Slider = () => {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      imageUrl: `url(${img3})`,
-      title: "Lossless Youths",
-      description:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    },
-    {
-      id: 2,
-      imageUrl: `url(${img4})`,
-      title: "Lossless Youths",
-      description:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    },
-    {
-      id: 3,
-      imageUrl: `url(${img5})`,
-      title: "Lossless Youths",
-      description:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    },
-    {
-      id: 4,
-      imageUrl: `url(${img6})`,
-      title: "Lossless Youths",
-      description:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    },
-    {
-      id: 5,
-      imageUrl: `url(${img7})`,
-      title: "Lossless Youths",
-      description:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    },
-  ]);
+  // Change the slide transition type.
+  var transition = "scale";
+  // try translate, scale, blur, rotate
 
-  const sliderRef = useRef(null);
+  var appearTransition = true;
+  // Change it to true to add an appear transition that fades the image in from grayscale to full color.
 
-  const activateNext = (e) => {
-    sliderRef.current.prepend();
-    console.log(".next");
+  var slides = [
+    "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?fit=crop&fm=jpg&h=825&q=80&w=1325",
+    "https://images.unsplash.com/photo-1445251836269-d158eaa028a6?fit=crop&fm=jpg&h=825&q=80&w=1325",
+    "https://images.unsplash.com/photo-1443926818681-717d074a57af?fit=crop&fm=jpg&h=825&q=80&w=1325",
+  ];
+
+  const [counter, setCounter] = useState(0);
+
+  const prevSlide = () => {
+    setCounter((prevCounter) =>
+      prevCounter - 1 < 0 ? slides.length - 1 : prevCounter - 1
+    );
   };
 
-  const activatePrev = (e) => {
-    sliderRef.current.append();
-    console.log(".prev");
+  const nextSlide = () => {
+    setCounter((prevCounter) =>
+      prevCounter + 1 < slides.length ? prevCounter + 1 : 0
+    );
+  };
+
+  var style = {
+    backgroundImage: "url(" + slides[counter] + ")",
   };
 
   return (
-    <div className="main">
-      <ul className="Slider" ref={sliderRef}>
-        {items.map((item, index) => (
-          <li
-            key={index}
-            className="item"
-            style={{ backgroundImage: item.imageUrl }}
-          >
-            <div className="content">
-              <h2 className="title">{item.title}</h2>
-              <p className="description">{item.description}</p>
-              <button>Read More</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <nav className="nav">
-        <button onClick={activateNext} className="prev">
-          <ArrowBackIosNewIcon />
-        </button>
-        <button onClick={activatePrev} className="next">
-          <ArrowForwardIosIcon />
-        </button>
-      </nav>
-    </div>
+    <>
+      <div className="carousel">
+        <div className="carousel__prev" onClick={prevSlide}>
+          ◀︎
+        </div>
+        <div className="carousel__next" onClick={nextSlide}>
+          ▶︎
+        </div>
+        <CSSTransitionGroup
+          transitionName={transition}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+          component="div"
+          className="carousel__slide"
+          transitionAppear={appearTransition}
+          transitionAppearTimeout={1000}
+        >
+          <div style={style} key={counter}></div>
+        </CSSTransitionGroup>
+      </div>
+    </>
   );
 };
+
+ReactDOM.render(<Slider />, document.getElementById("root"));
 export default Slider;
