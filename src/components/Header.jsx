@@ -13,8 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { pages, settings } from './../constants/constants';
-
-// const pages = [{menu:'Events',link:'events'},{menu:'Workshops',link:'workshops'},{menu:'Sponsors',link:'sponsors'},{menu:'Contact',link:'contact'}];
+import { Link } from 'react-router-dom';
+import { T77_logopng } from '../assets';
 
 function Header() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,12 +36,13 @@ function Header() {
 	};
 
 	return (
-		<AppBar position="static">
+		<AppBar position="static" className="sticky bg-black top-0 py-2">
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-					{/* <img src={index.T77_logojpg} className='w-10'/> */}
-					<Typography
+					<Link to="/" className="lg:visible sm:hidden">
+						<img src={T77_logopng} className="-20 h-16 hover:cursor-pointer mr-5" />
+					</Link>
+					{/* <Typography
 						variant="h6"
 						noWrap
 						component="a"
@@ -56,8 +57,8 @@ function Header() {
 							textDecoration: 'none',
 						}}
 					>
-						TECHOFES
-					</Typography>
+						<Link to="/">TECHOFES</Link>
+					</Typography> */}
 
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 						<IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
@@ -84,14 +85,17 @@ function Header() {
 							{pages.map((page) => (
 								<MenuItem key={page.id} onClick={handleCloseNavMenu}>
 									<Typography textAlign="center">
-										<a href={page.link}>{page.name}</a>
+										<Link to={page.link}>{page.name}</Link>
 									</Typography>
 								</MenuItem>
 							))}
 						</Menu>
 					</Box>
-					<AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-					<Typography
+					{/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+					<Link to="/">
+						<img src={T77_logopng} className="w-20 h-16 hover:cursor-pointer mr-5" />
+					</Link>
+					{/* <Typography
 						variant="h5"
 						noWrap
 						component="a"
@@ -108,11 +112,11 @@ function Header() {
 						}}
 					>
 						TECHOFES
-					</Typography>
+					</Typography> */}
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map((page) => (
 							<Button key={page.id} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-								<a href={page.link}>{page.name}</a>
+								<Link to={page.link}>{page.name}</Link>
 							</Button>
 						))}
 					</Box>
