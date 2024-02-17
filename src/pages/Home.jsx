@@ -1,3 +1,4 @@
+import Slider from '../components/Slider.jsx';
 // import { Title } from '../components/Title';
 import RevolveCarousel from '../components/revolveCarousel/revolveCarousel';
 
@@ -20,7 +21,9 @@ const Home = () => {
 			<div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div>
 			<RevolveCarousel />
 
-			<div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover"></div>
+			<div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover">
+				<Slider />
+			</div>
 		</div>
 	);
 };

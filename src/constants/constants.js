@@ -80,6 +80,7 @@ const pages = [
 	{ id: '2', name: 'event', link: '/events' },
 	{ id: '3', name: 'sponsors', link: 'sponsors' },
 	{ id: '4', name: 'contact', link: '/contact' },
+	{ id: '5', name: 'merchandise', link: '/merchandise' },
 ];
 
 const settings = ['Profile', 'Dashboard', 'Logout'];
