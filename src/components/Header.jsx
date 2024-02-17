@@ -11,7 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { pages, settings } from './../constants/constants';
 import { Link } from 'react-router-dom';
 import { T77_logopng } from '../assets';
@@ -36,10 +35,10 @@ function Header() {
 	};
 
 	return (
-		<AppBar position="static" className="sticky bg-black top-0 py-2">
+		<AppBar position="static" className="z-50 top-0 py-2" style={{ backgroundColor: 'black', position: 'sticky' }}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<Link to="/" className="lg:visible sm:hidden">
+					<Link to="/" className="">
 						<img src={T77_logopng} className="-20 h-16 hover:cursor-pointer mr-5" />
 					</Link>
 					{/* <Typography
@@ -92,9 +91,9 @@ function Header() {
 						</Menu>
 					</Box>
 					{/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-					<Link to="/">
+					{/* <Link to="/" className="sm:visible lg:hidden">
 						<img src={T77_logopng} className="w-20 h-16 hover:cursor-pointer mr-5" />
-					</Link>
+					</Link> */}
 					{/* <Typography
 						variant="h5"
 						noWrap
