@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
 import { TextField } from '@mui/material';
 import Header from '../components/Header';
 
@@ -19,7 +19,7 @@ const Registration = () => {
 			</div>
 		</>
 	);
-=======
+=========
 import { Button, TextField } from "@mui/material";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -30,12 +30,12 @@ import { DateField } from "@mui/x-date-pickers";
 import { data } from "autoprefixer";
 
 const Registration = () => {
-  const { register, handleSubmit, formState } = useForm();
-  const { errors } = formState;
+	const { register, handleSubmit, formState } = useForm();
+	const { errors } = formState;
 
-  function onSubmit(data) {
-    console.log(data);
-  }
+	function onSubmit(data) {
+		console.log(data);
+	}
 
   return (
     <>
@@ -193,7 +193,7 @@ const Registration = () => {
       </div>
     </>
   );
->>>>>>> 58b91fc5b02cf4ca5391208dfe3e21ff3536013c
+>>>>>>>>> Temporary merge branch 2
 };
 
 export default Registration;
