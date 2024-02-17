@@ -4,16 +4,20 @@ import Workshops from './pages/Workshops';
 import Sponsors from './pages/Sponsors';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
+import Registration from './pages/Registration';
+import Header from './components/Header';
 
 const App = () => {
 	return (
 		<BrowserRouter>
+			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/events" element={<Events />} />
 				<Route path="/sponsors" element={<Sponsors />} />
 				<Route path="/workshops" element={<Workshops />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/register" element={<Registration />} />
 			</Routes>
 		</BrowserRouter>
 	);

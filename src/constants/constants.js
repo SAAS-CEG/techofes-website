@@ -50,4 +50,12 @@ const eventRegistrationDetails = [
 	},
 ];
 
-export { eventRegistrationDetails };
+const pages = [
+	{ id: '1', name: 'workshop', link: '/workshops' },
+	{ id: '2', name: 'event', link: '/events' },
+	{ id: '3', name: 'sponsors', link: 'sponsors' },
+	{ id: '4', name: 'contact', link: '/contact' },
+];
+const settings = ['Profile', 'Dashboard', 'Logout'];
+
+export { eventRegistrationDetails, pages, settings };
