@@ -1,5 +1,5 @@
 import './Card.css';
-import { img1 } from '../assets/index';
+import { img1 } from './../../assets/index';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PublicIcon from '@mui/icons-material/Public';
 import { Link } from 'react-router-dom';
