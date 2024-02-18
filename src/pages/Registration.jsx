@@ -2,10 +2,12 @@ import { Button, TextField } from "@mui/material";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-// import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useForm } from "react-hook-form";
 import { DateField } from "@mui/x-date-pickers";
-import { data } from "autoprefixer";
+
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import ParticleConfig from "../particles/ParticleConfig";
 
 const Registration = () => {
   const { register, handleSubmit, formState } = useForm();
@@ -15,11 +17,20 @@ const Registration = () => {
     console.log(data);
   }
 
+  async function loadParticles(main) {
+    await loadSlim(main);
+  }
+
   return (
     <>
-      <div className="flex flex-col justify-center items-center my-10">
-        <div className="justify-center items-center h-[1350px] w-[800px] rounded-2xl p-4 shadow-2xl">
-          <h1 className="text-4xl my-5 justify-center items-center flex">
+      <Particles
+        id="tsparticles"
+        init={loadParticles}
+        options={ParticleConfig}
+      />
+      <div className="flex flex-col justify-center items-center my-10 mt-28">
+        <div className="justify-center items-center h-[1350px] w-[800px] rounded-2xl p-4 shadow-2xl bg-slate-100  text-blue-500">
+          <h1 className="text-4xl my-5 justify-center items-center flex font-anta text-[#272727]">
             REGISTER
           </h1>
           <form
@@ -30,7 +41,7 @@ const Registration = () => {
             <TextField
               error={errors?.firstname?.message}
               id="firstname"
-              label="firstName"
+              label="First Name"
               variant="outlined"
               className="w-80"
               {...register("firstname", {

@@ -2,21 +2,34 @@ import About from "../components/about/About";
 import CelebrityCard from "../components/celebrityCard/CelebrityCard";
 import RevolveCarousel from "../components/revolveCarousel/revolveCarousel";
 import Homeve from "../components/Homeve";
+import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
-      <div className="min-h-screen flex justify-center items-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center">
-        <h1 className="text-black font-bold text-8xl font-playFair">
-          TECHOFES
+    <div className="mt-20 bg-[#0f0f0f] cursor-default">
+      {/* Main Heading */}
+      <div className="min-h-screen flex flex-col justify-center items-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center">
+        <h1 className="waviy text-black font-bold text-5xl md:text-8xl tracking-widest -mt-20">
+          <center>
+            <span>TECHOFES '24</span>
+          </center>
         </h1>
+        <div className="text-3xl mt-16 font-unbounded">
+          4th - 8th April 2024
+        </div>
       </div>
-      <div className="p-10">
+
+      {/* About Section */}
+      <div className="p-10 text-white">
         <About />
       </div>
-      <div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed flex flex-col justify-center justify-between py-20">
+
+      {/* Main Carousel Section */}
+      <div className="bg-sea2 min-h-screen text-white bg-center bg-no-repeat bg-cover bg-fixed flex flex-col justify-center justify-between py-20">
         <RevolveCarousel />
       </div>
+
+      {/* Celebrities Section */}
       <div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover">
         <div className="py-10">
           <div className="text-center text-6xl font-anta text-black">
@@ -29,11 +42,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-screen">
+
+      {/* Proshows Section */}
+      <div className="min-h-screen text-white">
         <h1 className="text-6xl text-center mt-10 font-anta">Proshows</h1>
         <RevolveCarousel />
       </div>
 
+      {/* Events Section */}
       <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
         <Homeve />
       </div>

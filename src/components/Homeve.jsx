@@ -11,8 +11,8 @@ const Homeve = () => {
 
   return (
     <div className="pt-5">
-      <div className="flex justify-center items-center text-6xl py-10">
-        <h1 className="font-anta">Events</h1>
+      <div className="flex justify-center items-center text-6xl py-10 ">
+        <h1 className="font-anta text-white">Events</h1>
       </div>
       <div className="p-5 flex gap-5 justify-center items-center">
         {events.map((event, index) => {

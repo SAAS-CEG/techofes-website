@@ -41,7 +41,7 @@ const Workshops = () => {
   }
 
   return (
-    <div role="button" tabIndex="0" className="cardcarousel">
+    <div role="button" tabIndex="0" className="cardcarousel min-h-[65.8vh]">
       <div id="item1" className="revolveCard left">
         1
       </div>

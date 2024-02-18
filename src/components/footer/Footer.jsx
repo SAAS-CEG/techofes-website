@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="hero_area relative">
+    <div className="hero_area bg-black cursor-default relative">
       <svg
         className="absolute waves"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,21 +30,21 @@ const Footer = () => {
         </g>
       </svg>
 
-      <div className="absolute flex w-full flex-col justify-center items-center gap-y-2 ">
-        <ul className="social-icon flex gap-x-4">
-          <li>
+      <div className="absolute flex w-full flex-col justify-center items-center gap-y-2 text-white">
+        <ul className="social-icon flex gap-x-4 text-white">
+          <li className="hover:rotate-[360deg] hover:scale-110 transition duration-300">
             <Link to="#">
               {" "}
               <LinkedInIcon />
             </Link>
           </li>
-          <li>
+          <li className="hover:rotate-[360deg] hover:scale-110 transition duration-300">
             <Link to="#">
               {" "}
               <FacebookIcon />
             </Link>
           </li>
-          <li>
+          <li className="hover:rotate-[360deg] hover:scale-110 transition duration-300">
             <Link to="#">
               {" "}
               <InstagramIcon />
@@ -52,19 +52,19 @@ const Footer = () => {
           </li>
         </ul>
         <ul className="menu flex gap-x-4">
-          <li>
+          <li className="hover:text-black hover:font-bold">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="hover:text-black hover:font-bold">
             <Link to="#">About</Link>
           </li>
-          <li>
+          <li className="hover:text-black hover:font-bold">
             <Link to="#">Events</Link>
           </li>
-          <li>
+          <li className="hover:text-black hover:font-bold">
             <Link to="#">Sponsors</Link>
           </li>
-          <li>
+          <li className="hover:text-black hover:font-bold">
             <Link to="#">Team</Link>
           </li>
         </ul>
