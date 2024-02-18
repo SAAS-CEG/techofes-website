@@ -2,7 +2,6 @@ import About from "../components/about/About";
 import CelebrityCard from "../components/celebrityCard/CelebrityCard";
 import RevolveCarousel from "../components/revolveCarousel/revolveCarousel";
 import Homeve from "../components/Homeve";
-import Slider from "../components/mainCarousel/Slider";
 
 const Home = () => {
   return (
@@ -12,21 +11,17 @@ const Home = () => {
           TECHOFES
         </h1>
       </div>
-
       <div className="p-10">
         <About />
       </div>
-      <div className="p-10">
-        <About />
-      </div>
-
-      <div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed flex flex-col justify-center py-20">
+      <div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed flex flex-col justify-center justify-between py-20">
         <RevolveCarousel />
       </div>
-
       <div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover">
         <div className="py-10">
-          <div className="text-center text-6xl font-anta">Celebrities </div>
+          <div className="text-center text-6xl font-anta text-black">
+            Celebrities{" "}
+          </div>
           <div className="md:px-20 mt-14 w-full justify-around items-center flex-wrap flex gap-10">
             <CelebrityCard classId="celebrity-card1" />
             <CelebrityCard classId="celebrity-card2" />
@@ -34,13 +29,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <h1 className="text-4xl text-center mt-10">Proshows</h1>
-      <RevolveCarousel />
-
-      <div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover">
-        <Slider />
+      <div className="min-h-screen">
+        <h1 className="text-6xl text-center mt-10 font-anta">Proshows</h1>
+        <RevolveCarousel />
       </div>
+
       <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
         <Homeve />
       </div>

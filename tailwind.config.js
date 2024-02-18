@@ -42,28 +42,19 @@ export default {
         xl: "1280px",
         // => @media (min-width: 1280px) { ... }
 
-<<<<<<< HEAD
-				'2xl': '1536px',
-				// => @media (min-width: 1536px) { ... }
-			},
-			fontFamily: {
-				playFair: 'Playfair Display',
-				anta: 'Anta',
-				exo2: 'Exo 2',
-				courgette: 'Courgette',
-				unbounded: 'Unbounded',
-				rubik: 'Rubik Doodle Shadow',
-				viga: 'Viga',
-			},
-		},
-	},
-	plugins: [Myclass],
-=======
         "2xl": "1536px",
         // => @media (min-width: 1536px) { ... }
+      },
+      fontFamily: {
+        playFair: "Playfair Display",
+        anta: "Anta",
+        exo2: "Exo 2",
+        courgette: "Courgette",
+        unbounded: "Unbounded",
+        rubik: "Rubik Doodle Shadow",
+        viga: "Viga",
       },
     },
   },
   plugins: [Myclass],
->>>>>>> d34ff4b04ed140d21bcef09eba206580e21c96f9
 };
