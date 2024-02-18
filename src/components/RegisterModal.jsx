@@ -26,7 +26,7 @@ const style = {
   borderRadius: 2,
   color: "black",
   height: 500,
-  overflowY: "auto",
+  overflowY: "scroll",
 };
 
 const RegistrationModal = ({ event }) => {
@@ -85,12 +85,15 @@ const RegistrationModal = ({ event }) => {
             timeout: 500,
           },
         }}
+        sx={{
+          overflowY: "auto",
+        }}
       >
         <Fade in={open}>
           <Box sx={style} className="flex flex-col justify-center items-center">
             <h1
               style={{ fontSize: 40, marginBottom: 10 }}
-              className="text-4xl mb-6"
+              className="mt-20 text-4xl mb-6"
             >
               {event.eventName}
             </h1>

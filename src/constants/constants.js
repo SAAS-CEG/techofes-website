@@ -89,8 +89,9 @@ const eventRegistrationDetails = [
 ];
 
 const pages = [
-  { id: "1", name: "workshop", link: "/workshops" },
-  { id: "2", name: "event", link: "/events" },
+  /* 
+  { id: "1", name: "workshop", link: "/workshops" }, */
+  { id: "2", name: "events", link: "/events" },
   { id: "3", name: "sponsors", link: "sponsors" },
   { id: "4", name: "contact", link: "/contact" },
   { id: "5", name: "merchandise", link: "/merchandise" },

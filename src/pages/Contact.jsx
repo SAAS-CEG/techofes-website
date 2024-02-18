@@ -14,7 +14,7 @@ const Contact = () => {
         init={loadParticles}
         options={snowParticleConfig}
       />
-      <div className="flex items-center justify-center p-11 text-5xl text-white font-anta">
+      <div className="flex items-center justify-center p-11 text-3xl md:text-5xl text-white font-anta">
         <h1>CONTACT US</h1>
       </div>
 

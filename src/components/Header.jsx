@@ -50,7 +50,7 @@ function Header() {
             <Link to="/" className="">
               <img
                 src={T77_logopng}
-                className="-20 h-16 hover:cursor-pointer mr-5"
+                className="-20 h-16 hover:cursor-pointer mr-5 ml-5"
               />
             </Link>
             {/* <Typography
@@ -102,7 +102,7 @@ function Header() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">
+                    <Typography textAlign="center" textTransform="capitalize">
                       <Link to={page.link}>{page.name}</Link>
                     </Typography>
                   </MenuItem>
@@ -136,7 +136,14 @@ function Header() {
                 <Button
                   key={page.id}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 2,
+                    mx: 1,
+                    color: "white",
+                    display: "block",
+                    textTransform: "uppercase",
+                    fontSize: "16px",
+                  }}
                 >
                   <Link to={page.link}>{page.name}</Link>
                 </Button>

@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FlipCard = ({ event }) => {
   return (
-    <div className="w-[400px] h-[380px] bg-transparent cursor-pointer group perspective">
+    <div className="w-[300px] h-[350px] md:w-[400px] md:h-[380px] bg-transparent cursor-pointer group perspective">
       <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
         <div className="blur-load absolute backface-hidden w-full h-full">
           <LazyLoadImage

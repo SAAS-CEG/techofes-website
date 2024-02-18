@@ -29,8 +29,8 @@ const Registration = () => {
         options={ParticleConfig}
       />
       <div className="flex flex-col justify-center items-center my-10 mt-28">
-        <div className="justify-center items-center h-[1350px] w-[800px] rounded-2xl p-4 shadow-2xl bg-slate-100  text-blue-500">
-          <h1 className="text-4xl my-5 justify-center items-center flex font-anta text-[#272727]">
+        <div className="justify-center items-center h-[1350px] px-20 rounded-2xl bg-gray-300/10 shadow-2xl text-blue-500">
+          <h1 className="text-3xl md:text-4xl text-white my-5 justify-center items-center flex font-anta ">
             REGISTER
           </h1>
           <form
@@ -38,12 +38,41 @@ const Registration = () => {
             className="flex flex-col gap-y-10 justify-center items-center p-5"
           >
             {/* <label onError={errors?.firstname?.message}>sbxjsxns</label> */}
+
             <TextField
               error={errors?.firstname?.message}
               id="firstname"
               label="First Name"
               variant="outlined"
-              className="w-80"
+              className="w-80 text-white"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               {...register("firstname", {
                 required: "This field is required",
               })}
@@ -54,6 +83,34 @@ const Registration = () => {
               label="lastName"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               {...register("lastname", {
                 required: "This field is required",
               })}
@@ -64,6 +121,34 @@ const Registration = () => {
               label="email"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               type="email"
               {...register("email", {
                 required: "This field is required",
@@ -72,9 +157,37 @@ const Registration = () => {
             <TextField
               error={errors?.password?.message}
               id="password"
-              label="password"
+              label="Password"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               type="password"
               {...register("password", {
                 required: "This field is required",
@@ -83,9 +196,37 @@ const Registration = () => {
             <TextField
               error={errors?.Phone?.message}
               id="Phone"
-              label="phone"
+              label="Phone"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               type="number"
               {...register("Phone", {
                 required: "This field is required",
@@ -94,9 +235,37 @@ const Registration = () => {
             <TextField
               error={errors?.Rollno?.message}
               id="Rollno"
-              label="rollno"
+              label="Register No"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               type="number"
               {...register("Rollno", {
                 required: "This field is required",
@@ -108,6 +277,34 @@ const Registration = () => {
                   error={errors?.dob?.message}
                   label="DOB"
                   id="dob"
+                  sx={{
+                    input: {
+                      color: "white",
+                    },
+                    "& label": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline": {
+                      borderBottomColor: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                    },
+                  }}
                   className="w-[325px]"
                   {...register("dob", {
                     required: "This field is required",
@@ -118,9 +315,37 @@ const Registration = () => {
             <TextField
               error={errors?.college_name?.message}
               id="college_name"
-              label="college"
+              label="College"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               {...register("college_name", {
                 required: "This field is required",
               })}
@@ -128,9 +353,37 @@ const Registration = () => {
             <TextField
               error={errors?.department?.message}
               id="department"
-              label="department"
+              label="Department"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               {...register("department", {
                 required: "This field is required",
               })}
@@ -138,9 +391,37 @@ const Registration = () => {
             <TextField
               error={errors?.city?.message}
               id="city"
-              label="city"
+              label="City"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               {...register("city", {
                 required: "This field is required",
               })}
@@ -148,9 +429,37 @@ const Registration = () => {
             <TextField
               error={errors?.year?.message}
               id="year"
-              label="year"
+              label="Year of study"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               type="number"
               {...register("year", {
                 required: "This field is required",
@@ -167,9 +476,37 @@ const Registration = () => {
             <TextField
               error={errors?.state?.message}
               id="state"
-              label="state"
+              label="State"
               variant="outlined"
               className="w-80"
+              sx={{
+                input: {
+                  color: "white",
+                },
+                "& label": {
+                  color: "white",
+                },
+                "& .MuiInput-underline": {
+                  borderBottomColor: "white",
+                },
+                "& label.Mui-focused": {
+                  color: "white",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               {...register("state", {
                 required: "This field is required",
               })}

@@ -23,7 +23,7 @@ const Sponsors = () => {
         options={snowParticleConfig}
       />
       <div className="h-full pb-11 mt-20 cursor-default">
-        <div className="flex items-center justify-center p-11 text-5xl text-white font-anta">
+        <div className="flex items-center justify-center p-11 text-3xl md:text-5xl text-white font-anta">
           <h1>OUR SPONSERS</h1>
         </div>
 

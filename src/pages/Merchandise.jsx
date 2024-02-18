@@ -4,7 +4,7 @@ import { ThreeDCardDemo } from "../components/Card3d";
 const Merchandise = () => {
   return (
     <div className="mt-20">
-      <div className="flex items-center justify-center p-8 pt-10 pb-5 text-5xl text-white font-anta">
+      <div className="flex items-center justify-center p-8 pt-10 pb-5 text-3xl md:text-5xl text-white font-anta">
         <h1>GET YOUR T-SHIRT</h1>
       </div>
       <div className="flex flex-col md:flex-row justify-around items-center w-full min-h-[500px] px-10 mb-20 bg-zinc-900 text-white md:mt-5 pb-8">

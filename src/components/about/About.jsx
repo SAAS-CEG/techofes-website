@@ -46,7 +46,7 @@ const About = () => {
   }, []); // Empty dependency array to ensure effect runs only once
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center p-5 md:p-10 overflow-hidden">
+    <div className="flex flex-col md:flex-row justify-center items-center p-2 md:p-10 overflow-hidden">
       <div
         className={`w-full md:w-1/2 slide-in-left ${
           isVisibleLeft ? "active" : ""

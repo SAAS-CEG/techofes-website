@@ -27,7 +27,7 @@ export default {
       backgroundImage: {
         sea1: "url('https://source.unsplash.com/Ke6Pr-9A2ac')",
         sea2: "url('https://source.unsplash.com/AUXanrckXn0')",
-        sea3: 'url("https://source.unsplash.com/OqSV8JWhm3c")',
+        sea3: "bg-gradient-to-r from-purple-500 to-pink-500",
       },
       screens: {
         sm: "640px",

@@ -10,11 +10,11 @@ const Homeve = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="pt-5">
-      <div className="flex justify-center items-center text-6xl py-10 ">
-        <h1 className="font-anta text-white">Events</h1>
+    <div className="md:pt-5 pb-20 md:pb-0">
+      <div className="flex justify-center items-center text-6xl py-10">
+        <h1 className="font-anta text-white text-3xl md:text-6xl">Events</h1>
       </div>
-      <div className="p-5 flex gap-5 justify-center items-center">
+      <div className="md:p-5 flex gap-5 justify-center items-center flex-wrap">
         {events.map((event, index) => {
           return (
             <div
@@ -30,7 +30,7 @@ const Homeve = () => {
         })}
         <button
           onClick={() => navigate("/events")}
-          className="text-gray-100 font-courgette hover:scale-110 transition duration-300"
+          className="w-[300px] md:w-[100px] text-gray-100 font-courgette hover:scale-110 transition duration-300"
         >
           view more...
         </button>
