@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./CelebrityCard.css"; // Import CSS file for card styles
 
-const CelebrityCard = () => {
+// eslint-disable-next-line react/prop-types
+const CelebrityCard = ({ classId }) => {
   const [bounds, setBounds] = useState(null);
   const [transformStyle, setTransformStyle] = useState("");
   const [glowStyle, setGlowStyle] = useState({});
@@ -35,24 +36,27 @@ const CelebrityCard = () => {
     setGlowStyle(glowStyle);
     setTransformStyle(rotation);
   };
-
   const handleMouseEnter = () => {
-    const cardElement = document.querySelector(".card");
+    const cardElement = document.querySelector(`.${classId}`);
 
     const bounds = cardElement.getBoundingClientRect();
     setBounds(bounds);
-    document.addEventListener("mousemove", rotateToMouse);
+    cardElement.addEventListener("mousemove", rotateToMouse);
   };
 
   const handleMouseLeave = () => {
-    document.removeEventListener("mousemove", rotateToMouse);
+    const cardElement = document.querySelector(`.${classId}`);
+
+    cardElement.removeEventListener("mousemove", rotateToMouse);
     setTransformStyle("");
     setGlowStyle({});
   };
 
+  const classNameValue = `card ${classId}`;
+
   return (
     <div
-      className="card"
+      className={classNameValue}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -60,7 +64,7 @@ const CelebrityCard = () => {
         boxShadow: "0 0 10px 10px rgba(255, 255, 255, 0.3)",
       }}
     >
-      <div className="glow bg-red-500 rounded-lg" style={glowStyle}></div>
+      <div className="glow rounded-lg" style={glowStyle}></div>
       <div className="content"></div>
     </div>
   );
