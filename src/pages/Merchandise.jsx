@@ -3,7 +3,7 @@ import { ThreeDCardDemo } from '../components/Card3d';
 
 const Merchandise = () => {
 	return (
-		<div className="flex justify-around w-full px-10 mb-20">
+		<div className="flex justify-around w-full px-10 mb-20 bg-gray-700">
 			<div className="flex gap-x-10 justify-center items-center w-[50%]">
 				<ThreeDCardDemo />
 				<BackgroundGradientDemo />

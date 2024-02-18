@@ -45,6 +45,15 @@ export default {
 				'2xl': '1536px',
 				// => @media (min-width: 1536px) { ... }
 			},
+			fontFamily: {
+				playFair: 'Playfair Display',
+				anta: 'Anta',
+				exo2: 'Exo 2',
+				courgette: 'Courgette',
+				unbounded: 'Unbounded',
+				rubik: 'Rubik Doodle Shadow',
+				viga: 'Viga',
+			},
 		},
 	},
 	plugins: [Myclass],
