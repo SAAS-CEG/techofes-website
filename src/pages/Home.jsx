@@ -2,6 +2,7 @@ import About from "../components/about/About";
 import CelebrityCard from "../components/celebrityCard/CelebrityCard";
 import Slider from "../components/mainCarousel/Slider";
 import RevolveCarousel from "../components/revolveCarousel/revolveCarousel";
+import Homeve from "../components/Homeve";
 
 const Home = () => {
   return (
@@ -26,6 +27,9 @@ const Home = () => {
 
       <div className="bg-sea3 min-h-screen bg-fixed bg-no-repeat bg-cover">
         <Slider />
+      </div>
+      <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
+        <Homeve />
       </div>
     </div>
   );

@@ -1,129 +1,117 @@
-.carousel {
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-ul.slides {
-  display: block;
-  position: relative;
-  height: 600px;
-  margin: 0;
-  padding: 0;
+/* .sr-only {
+  position: absolute;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
-  list-style: none;
+  color: transparent;
 }
 
-.slides * {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-ul.slides input {
-  display: none;
-}
-
-.slide-container {
-  display: block;
-}
-
-.slide-image {
-  display: block;
+input {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
   opacity: 0;
-  transition: all 0.7s ease-in-out;
-}
-
-.slide-image img {
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  font-size: 100px;
-  line-height: 600px;
-  color: #fff;
-}
-
-.carousel-controls label {
-  display: none;
-  position: absolute;
-  padding: 0 20px;
-  opacity: 0;
-  transition: opacity 0.2s;
+  margin-top: 95vh;
   cursor: pointer;
 }
 
-.slide-image:hover + .carousel-controls label {
-  opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-  opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-  width: 49%;
-  text-align: left;
-  left: 0;
-}
-
-.carousel-controls .next-slide {
-  width: 49%;
-  text-align: right;
-  right: 0;
-}
-
-.carousel-dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  z-index: 999;
-  text-align: center;
-}
-
-.carousel-dots .carousel-dot {
+label {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.5;
-  margin: 10px;
+  width: 12px;
+  height: 12px;
+  border: solid 2px white;
+  border-radius: 999px;
+  background-color: transparent;
+  margin: 95vh 6px 0 6px;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0 0 20px 0 #000;
 }
 
-input:checked + .slide-container .slide-image {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 1s ease-in-out;
+input:checked + label {
+  background-color: white;
 }
 
-input:checked + .slide-container .carousel-controls label {
+input + label::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 55%;
+  background-size: 80px 80px;
+  line-height: 100vh;
+  transition: background-size 200ms;
+  position: absolute;
+  color: white;
+  height: calc(95vh - 12px);
+  width: 80px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+input + label:hover::after {
+  background-size: 90px 90px;
+}
+
+input:checked + label::after {
+  background-image: none;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
+}
+
+input:checked + label + .slide ~ input + label::after {
+  display: none;
+}
+
+input:checked + label + .slide + input + label::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
   display: block;
+  width: 80px;
+  right: 0;
+  left: auto;
 }
 
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+input:focus + label {
+  box-shadow: 0 0 0 2px teal, 0 0 18px white;
+}
+
+.slide {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition-duration: 0.4s;
   opacity: 1;
 }
 
-input:checked + .slide-container .nav label {
-  display: block;
+input:checked ~ .slide {
+  transform: translateX(100%);
 }
+
+input:checked + label + .slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.bg1 {
+  background-image: url(https://images.unsplash.com/photo-1422806310414-91469fe4977e?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=114e7a73b2385128045a5555b981e939);
+}
+.bg2 {
+  background-image: url(https://images.unsplash.com/photo-1490020641477-3b0e96306b9a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=d8358f021c68f49335fe44b10f70b700);
+}
+.bg3 {
+  background-image: url(https://images.unsplash.com/photo-1512529111457-3e8a595ef8e9?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=9b3ab76b65a358830d60ca43be76f2e1);
+}
+.bg4 {
+  background-image: url(https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=92d2cae094fb24e5266221828ee251e2);
+}
+.bg5 {
+  background-image: url(https://images.unsplash.com/reserve/wPCyys8TPCHY3GXm2N2D_ssp_inthewoods_1.jpg?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=654d988a19f43ca9ac27f2eacbe2a554);
+} */

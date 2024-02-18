@@ -1,8 +1,8 @@
 import "./Maincaro.css";
-// import img3 from "../../assets/img3.jpeg";
-// import img4 from "../../assets/img4.jpeg";
-// import img5 from "../../assets/img5.jpeg";
-// import img6 from "../../assets/img6.jpg";
+import img3 from "../../assets/img3.jpeg";
+import img4 from "../../assets/img4.jpeg";
+import img5 from "../../assets/img5.jpeg";
+import img6 from "../../assets/img6.jpg";
 const Slider = () => {
   <div className="carousel">
     <ul className="slides">
