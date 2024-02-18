@@ -12,11 +12,13 @@ const Home = () => {
         <About />
       </div>
 
-      <div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed">
-        <div className="mt-20">
+      <div className="bg-sea2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed flex flex-col justify-center py-20">
+        <div>
           <div className="text-center text-6xl">Celebrities </div>
-          <div className="mt-20 w-full flex justify-center items-center">
-            <CelebrityCard key="card1" />
+          <div className="md:px-20 mt-14 w-full flex justify-around items-center flex-wrap flex gap-10">
+            <CelebrityCard classId="celebrity-card1" />
+            <CelebrityCard classId="celebrity-card2" />
+            <CelebrityCard classId="celebrity-card3" />
           </div>
         </div>
       </div>
