@@ -5,7 +5,7 @@ import Sponsors from "./pages/Sponsors";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Registration from "./pages/Registration";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Merchandise from "./pages/Merchandise";
 import Footer from "./components/footer/Footer";
 
