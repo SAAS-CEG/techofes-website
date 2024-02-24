@@ -20,8 +20,10 @@ const Home = () => {
       </div>
 
       {/* About Section */}
-      <div className="p-5 md:p-10 text-white">
-        <About />
+      <div className="box">
+        <div className="p-5 md:p-10 text-white">
+          <About />
+        </div>
       </div>
 
       {/* Main Carousel Section */}

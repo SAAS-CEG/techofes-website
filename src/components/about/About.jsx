@@ -52,19 +52,24 @@ const About = () => {
           isVisibleLeft ? "active" : ""
         }`}
       >
-        <div className="text-3xl md:text-6xl mb-5 font-anta">About</div>
-        <div className="text-sm md:text-lg text-justify font-thin tracking-wide font-viga">
-          Techofes, an annual extravaganza hosted at the College of Engineering,
-          Guindy, is a celebration that ignites the spirits of students from
-          across India. Bursting with fiery performances and captivating musical
-          acts, Techofes sets the stage for an unforgettable experience. Each
-          year, this grand event showcases the incredible talent and creativity
-          of young minds, bringing together a diverse array of performances,
-          competitions, and cultural showcases. From electrifying dance
-          performances to soul-stirring music, Techofes promises a vibrant
-          tapestry of entertainment and excitement. As students gather to
-          celebrate innovation, artistry, and camaraderie, Techofes embodies the
-          spirit of youthful enthusiasm and excellence.
+        <div className="glass">
+          <div className="text-3xl md:text-6xl mb-5 font-anta  flex justify-center items-center">
+            ABOUT US
+          </div>
+          <div className="text-sm md:text-lg text-justify p-3 font-thin tracking-wide font-viga">
+            Techofes, an annual extravaganza hosted at the College of
+            Engineering, Guindy, is a celebration that ignites the spirits of
+            students from across India. Bursting with fiery performances and
+            captivating musical acts, Techofes sets the stage for an
+            unforgettable experience. Each year, this grand event showcases the
+            incredible talent and creativity of young minds, bringing together a
+            diverse array of performances, competitions, and cultural showcases.
+            From electrifying dance performances to soul-stirring music,
+            Techofes promises a vibrant tapestry of entertainment and
+            excitement. As students gather to celebrate innovation, artistry,
+            and camaraderie, Techofes embodies the spirit of youthful enthusiasm
+            and excellence.
+          </div>
         </div>
       </div>
       <div
