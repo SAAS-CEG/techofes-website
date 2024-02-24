@@ -50,6 +50,10 @@
 .animate-in {
   animation: fadeIn 0.75s;
 }
+.box {
+  background: rgb(108, 46, 179);
+  background: radial-gradient(circle, #4569e5, #000000);
+}
 
 #title {
   font-weight: lighter;
