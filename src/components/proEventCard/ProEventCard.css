@@ -18,24 +18,3 @@
 	-webkit-backdrop-filter: blur(15.5px);
 	border: 1px solid rgba(165, 158, 158, 0.85);
 }
-
-.slide-in-left,
-.slide-in-right {
-	opacity: 0;
-	transition: opacity 0.5s, transform 0.5s;
-	overflow-x: hidden;
-}
-
-.slide-in-left {
-	transform: translateX(-100%);
-}
-
-.slide-in-right {
-	transform: translateX(100%);
-}
-
-.slide-in-left.active,
-.slide-in-right.active {
-	opacity: 1;
-	transform: translateX(0);
-}
