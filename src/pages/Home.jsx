@@ -5,6 +5,8 @@ import Homeve from "../components/Homeve";
 import "./Home.css";
 import Logo from "../../src/assets/T77_logo.png";
 import { useState } from "react";
+import ProEventCard from "../components/proEventCard/ProEventCard";
+import Sponsors from "./Sponsors";
 
 const Home = () => {
   const [hover, setHover] = useState(false);
@@ -74,12 +76,20 @@ const Home = () => {
       </div>
 
       {/* Main Carousel Section */}
-      <div className="bg-sea2 min-h-[525px] md:min-h-screen text-white bg-center bg-no-repeat bg-cover bg-fixed flex flex-col justify-center justify-between md:py-20">
-        <RevolveCarousel />
+      <div className="bg-black min-h-[525px] md:min-h-screen text-white flex flex-col justify-center justify-between md:py-20">
+        <h1 className="text-3xl md:text-6xl text-center mt-2 mb-10 font-anta text-sky-500 font-bold">
+          Our Pro-Events
+        </h1>
+        {/* <RevolveCarousel /> */}
+        <ProEventCard />
+        <div className="text-center text-orange-400 text-6xl font-bold mt-20">
+          25+ INTERESTING EVENTS
+        </div>
       </div>
 
       {/* Celebrities Section */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-700 min-h-screen bg-fixed bg-no-repeat bg-cover">
+      {/* Gradient background style : bg-gradient-to-r from-slate-900 to-slate-700 */}
+      {/*  <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
         <div className="py-10">
           <div className="text-center text-3xl font-bold md:text-6xl font-anta text-white">
             Celebrities
@@ -90,20 +100,13 @@ const Home = () => {
             <CelebrityCard classId="celebrity-card3" />
           </div>
         </div>
-      </div>
-
-      {/* Proshows Section */}
-      <div className="min-h-[525px] md:min-h-screen text-white">
-        <h1 className="text-3xl md:text-6xl text-center mt-10 font-anta">
-          Proshows
-        </h1>
-        <RevolveCarousel />
-      </div>
+      </div> */}
+      <Sponsors />
 
       {/* Events Section */}
-      <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
-        <Homeve />
-      </div>
+      {/* <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
+				<Homeve />
+			</div> */}
     </div>
   );
 };

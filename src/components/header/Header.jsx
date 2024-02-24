@@ -51,7 +51,7 @@ function Header() {
   }; */
 
   return (
-    <div className={`fixed w-full z-10 top-0 navbar`}>
+    <div className={`fixed w-full z-20 top-0 navbar`}>
       <AppBar
         position="static"
         className="z-50 top-0 py-2 hidden"

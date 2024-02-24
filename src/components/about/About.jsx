@@ -48,7 +48,7 @@ const About = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center p-2 md:p-10 about-outer">
       <div
-        className={`w-full md:w-1/2 slide-in-left ${
+        className={`w-full md:w-1/2 about-slide-in-left ${
           isVisibleLeft ? "active" : ""
         }`}
       >
@@ -74,7 +74,7 @@ const About = () => {
         </div>
       </div>
       <div
-        className={`w-full md:w-1/2 flex justify-center slide-in-right ${
+        className={`w-full md:w-1/2 flex justify-center about-slide-in-right ${
           isVisibleRight ? "active" : ""
         }`}
       >
