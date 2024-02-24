@@ -76,12 +76,12 @@ const eventRegistrationDetails = [
 ];
 
 const pages = [
-	{ id: '1', name: 'home', link: '/home' },
-	{ id: '2', name: 'about', link: '/about' },
-	{ id: '3', name: 'events', link: '/events' },
-	{ id: '4', name: 'merchandise', link: '/merchandise' },
-	{ id: '5', name: 'sponsors', link: 'sponsors' },
-	{ id: '6', name: 'contact', link: '/contact' },
+	{ id: '1', name: 'Home', link: '/' },
+	{ id: '1', name: 'About', link: '/' },
+	{ id: '2', name: 'Events', link: '/events' },
+	{ id: '5', name: 'Merchandise', link: '/merchandise' },
+	{ id: '3', name: 'Sponsor', link: '/sponsors' },
+	{ id: '4', name: 'Contact', link: '/contact' },
 ];
 
 const settings = ['Profile', 'Dashboard', 'Logout'];
