@@ -32,3 +32,14 @@
   background: rgb(108, 46, 179);
   background: radial-gradient(circle, #4569e5, #000000);
 }
+
+#title {
+  font-weight: lighter;
+  color: #d400b8;
+  background: #ed6823;
+  background: linear-gradient(to right, #ed6823 0%, #891fcc 50%, #4b5de9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 1000;
+}

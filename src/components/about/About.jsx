@@ -52,11 +52,11 @@ const About = () => {
           isVisibleLeft ? "active" : ""
         }`}
       >
-        <div className="glass">
+        <div className="glass p-6 ">
           <div className="text-3xl md:text-6xl mb-5 font-anta  flex justify-center items-center">
             ABOUT US
           </div>
-          <div className="text-sm md:text-lg text-justify p-3 font-thin tracking-wide font-viga">
+          <div className="text-sm md:text-lg text-justify font-thin tracking-wide font-viga">
             Techofes, celebrated as the largest cultural festival in South
             India, is gearing up for its 77th edition. As CEG's renowned
             inter-college cultural fest, Techofes provides a vibrant platform
