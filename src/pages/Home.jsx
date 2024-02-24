@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[#0f0f0f] cursor-default">
+    <div className="bg-[#0f0f0f] cursor-default overflow-hidden">
       {/* Main Heading */}
       <div className="min-h-96 pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center items-center overflow-hidden">
         <div className="min-h-96 w-full pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center items-center overflow-hidden backGround">

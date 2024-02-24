@@ -8,8 +8,8 @@ const About = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const slideInLeftElement = document.querySelector(".slide-in-left");
-      const slideInRightElement = document.querySelector(".slide-in-right");
+      const slideInLeftElement = document.querySelector(".about-outer");
+      const slideInRightElement = document.querySelector(".about-outer");
 
       // Calculate the position of the left element relative to the viewport
       const leftElementTop = slideInLeftElement.getBoundingClientRect().top;
@@ -46,17 +46,17 @@ const About = () => {
   }, []); // Empty dependency array to ensure effect runs only once
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center p-2 md:p-10 overflow-hidden">
+    <div className="flex flex-col md:flex-row justify-center items-center p-2 md:p-10 about-outer">
       <div
         className={`w-full md:w-1/2 slide-in-left ${
           isVisibleLeft ? "active" : ""
         }`}
       >
-        <div className="glass p-6 ">
-          <div className="text-3xl md:text-6xl mb-5 font-anta  flex justify-center items-center">
+        <div className="glass p-8 border-none">
+          <div className="text-xl md:text-3xl mb-5 font-anta flex justify-center items-center">
             ABOUT US
           </div>
-          <div className="text-sm md:text-lg text-justify font-thin tracking-wide font-viga">
+          <div className="text-sm md:text-lg text-center font-thin tracking-wide font-viga">
             Techofes, celebrated as the largest cultural festival in South
             India, is gearing up for its 77th edition. As CEG's renowned
             inter-college cultural fest, Techofes provides a vibrant platform
