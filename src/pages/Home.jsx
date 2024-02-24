@@ -8,34 +8,61 @@ import { useState } from "react";
 
 const Home = () => {
   const [hover, setHover] = useState(false);
+  const [animationComplete, setAnimationComplete] = useState(null);
+
+  const handleAnimationEnd = () => {
+    setAnimationComplete(true);
+  };
+
+  const handleMouseEnter = () => {
+    if (animationComplete) {
+      setHover(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setHover(false);
+  };
 
   return (
-    <div className="mt-20 bg-[#0f0f0f] cursor-default">
+    <div className="bg-[#0f0f0f] cursor-default">
       {/* Main Heading */}
-      <div className="min-h-56 pt-14 md:pt-0 md:min-h-[90vh] flex flex-col justify-center items-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center">
-        <div
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          className="flex items-center"
-        >
-          {!hover && (
-            <div id="title" className="text-8xl w-full text-center">
-              South India's Biggest <br /> SaaS Event is here!!
-            </div>
-          )}
-          {hover && (
-            <div className="w-full flex justify-between items-center">
-              <div id="title" className="text-8xl text-left w-2/3">
-                South India's <br />
-                Biggest <br />
-                SaaS Event is <br />
-                here!!
+      <div className="min-h-96 pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center items-center overflow-hidden">
+        <div className="min-h-96 w-full pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center items-center overflow-hidden backGround">
+          <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onAnimationEnd={handleAnimationEnd}
+            className="flex items-center main-title"
+          >
+            {!hover && (
+              <div
+                id="title"
+                className={`text-8xl w-full text-center ${
+                  !hover ? "animate-in" : ""
+                }`}
+              >
+                South India's Biggest <br /> SaaS Event is here!!
               </div>
-              <div className="w-1/2 p-10">
-                <img src={Logo} className="w-full h-full" />
+            )}
+            {hover && (
+              <div
+                className={`w-full justify-between items-center ${
+                  hover ? "flex animate-in" : "hidden"
+                }`}
+              >
+                <div id="title" className="text-8xl text-left w-2/3">
+                  South India's <br />
+                  Biggest <br />
+                  SaaS Event is <br />
+                  here!!
+                </div>
+                <div className="w-1/2 p-10">
+                  <img src={Logo} className="w-full h-full" />
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
 
@@ -56,7 +83,7 @@ const Home = () => {
             Celebrities
           </div>
           <div className="md:px-20 mt-14 w-full justify-around items-center flex-wrap flex gap-10">
-            <CelebrityCard classId="celebrity-card1" />
+            <CelebrityCard classId="celebrity-card1 card-animate" />
             <CelebrityCard classId="celebrity-card2" />
             <CelebrityCard classId="celebrity-card3" />
           </div>

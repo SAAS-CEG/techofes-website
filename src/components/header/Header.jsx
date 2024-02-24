@@ -14,12 +14,26 @@ import MenuItem from "@mui/material/MenuItem";
 import { pages, settings } from "../../constants/constants";
 import { Link } from "react-router-dom";
 import HeaderButton from "./header-button";
+import { useEffect, useState } from "react";
+import "./Header.css";
 /* import { T77_logopng } from "../assets"; */
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [hover, setHover] = React.useState(false);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set isVisible to true after a short delay to allow the component to render
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 500); // Adjust delay as needed
+
+    // Clean up the timeout to avoid memory leaks
+    return () => clearTimeout(timeout);
+  }, []); // Empty dependency array ensures this effect runs only once on component mount
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -37,7 +51,7 @@ function Header() {
   }; */
 
   return (
-    <div className="fixed w-full z-10 top-0">
+    <div className={`fixed w-full z-10 top-0 navbar`}>
       <AppBar
         position="static"
         className="z-50 top-0 py-2 hidden"

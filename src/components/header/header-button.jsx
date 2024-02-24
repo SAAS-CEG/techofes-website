@@ -7,9 +7,9 @@ function HeaderButton({ children, onClick }) {
   return (
     <div
       onClick={onClick}
-      className="py-3 px-8 white text-xl hover:scale-105 transition ease-in-out duration-150"
+      className="py-3 px-8 white text-2xl hover:scale-105 transition ease-in-out duration-150"
       style={{
-        textShadow: hover ? "0 0 20px orange" : "0 0 10px orange",
+        textShadow: hover ? "0 0 30px orange" : "0 0 20px orange",
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
