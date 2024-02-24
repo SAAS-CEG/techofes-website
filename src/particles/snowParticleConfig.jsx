@@ -229,7 +229,7 @@ const snowParticleConfig = {
 			},
 			z7500: {
 				number: {
-					value: 1000,
+					value: 100,
 				},
 				zIndex: {
 					value: 75,

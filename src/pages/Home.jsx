@@ -7,6 +7,7 @@ import Logo from '../../src/assets/T77_logo.png';
 import { useState } from 'react';
 import ProEventCard from '../components/proEventCard/ProEventCard';
 import Sponsors from './Sponsors';
+import CountDownTimer from '../components/countDownTimer/CountDownTimer';
 
 const Home = () => {
 	const [hover, setHover] = useState(false);
@@ -33,8 +34,13 @@ const Home = () => {
 				<div className="min-h-96 w-full pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center items-center overflow-hidden backGround">
 					<div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onAnimationEnd={handleAnimationEnd} className="flex items-center main-title">
 						{!hover && (
-							<div id="title" className={`text-8xl w-full text-center ${!hover ? 'animate-in' : ''}`}>
-								South India's Biggest <br /> SaaS Event is here!!
+							<div>
+								<div id="title" className={`text-8xl w-full text-center ${!hover ? 'animate-in' : ''}`}>
+									South India's Biggest <br /> SaaS Event is here!!
+								</div>
+								<div className="z-50">
+									<CountDownTimer timeTillDate="05 26 2024, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
+								</div>
 							</div>
 						)}
 						{hover && (
@@ -62,7 +68,7 @@ const Home = () => {
 			</div>
 
 			{/* Main Carousel Section */}
-			<div className="bg-black min-h-[525px] md:min-h-screen text-white flex flex-col justify-center justify-between md:py-20">
+			<div className="bg-black min-h-[525px] md:min-h-screen text-white flex flex-col justify-center md:py-20">
 				<h1 className="text-3xl md:text-6xl text-center mt-2 mb-10 font-anta text-sky-500 font-bold">Our Pro-Events</h1>
 				{/* <RevolveCarousel /> */}
 				<ProEventCard />
@@ -88,7 +94,7 @@ const Home = () => {
 			{/* Events Section */}
 			{/* <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
 				<Homeve />
-			</div> */}
+		</div> */}
 		</div>
 	);
 };

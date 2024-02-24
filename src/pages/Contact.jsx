@@ -62,7 +62,7 @@ const Contact = () => {
 						/>
 						<TextField
 							id="standard-basic"
-							label="Standard"
+							label="Email"
 							variant="standard"
 							sx={{
 								input: {
@@ -103,7 +103,7 @@ const Contact = () => {
 						/>
 						<TextField
 							id="standard-basic"
-							label="Standard"
+							label="Message"
 							variant="standard"
 							sx={{
 								input: {
@@ -146,20 +146,18 @@ const Contact = () => {
 					<div className="flex flex-wrap flex-col w-max">
 						<div className="w-full p-3">
 							<div className="flex-auto w-full p-4 rounded-2xl">
-								<h1 className="text-xl m-2 font-unbounded">CONTACT</h1>
-								<p className="text-sm md:text-base px-4 py-1">Lorem ipsum - +91 1234567890</p>
-								<p className="text-sm md:text-base px-4 py-1">Lorem ipsum - +91 1234567890</p>
+								<h1 className="text-xl m-2 font-unbounded">For Sponsorship :</h1>
+								<p className="text-sm md:text-base px-4 py-1">Manisha : 6302831408</p>
+								<p className="text-sm md:text-base px-4 py-1">Vijay : 8608556824</p>
+								<p className="text-sm md:text-base px-4 py-1"> email : corporaterelations@saasceg.com</p>
 							</div>
 						</div>
 						<div className="w-full p-3">
 							<div className="flex-auto w-full p-4 rounded-2xl">
-								<h1 className="text-xl m-2 font-unbounded">EMAIL</h1>
-								<p className="text-sm md:text-base px-4 py-1">
-									Lorem ipsum - <span className="underline">techofes1@gmail.com</span>
-								</p>
-								<p className="text-sm md:text-base px-4 py-1">
-									Lorem ipsum - <span className="underline">techofes2@gmail.com</span>
-								</p>
+								<h1 className="text-xl m-2 font-unbounded">For General Queries :</h1>
+								<p className="text-sm md:text-base px-4 py-1">Jayaharish : 9597942324</p>
+								<p className="text-sm md:text-base px-4 py-1">Sivanitha : 8825702662</p>
+								<p className="text-sm md:text-base px-4 py-1">email : saas.ceg.official@gmail.com</p>
 							</div>
 						</div>
 					</div>
