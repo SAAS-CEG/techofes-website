@@ -2,56 +2,22 @@ import { useState, useEffect } from "react";
 import "./About.css"; // Import CSS file for animation styles
 import { T77_logopng } from "./../../assets/index/";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const About = () => {
-  const [isVisibleLeft, setIsVisibleLeft] = useState(false);
-  const [isVisibleRight, setIsVisibleRight] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      const slideInLeftElement = document.querySelector(".about-outer");
-      const slideInRightElement = document.querySelector(".about-outer");
-
-      // Calculate the position of the left element relative to the viewport
-      const leftElementTop = slideInLeftElement.getBoundingClientRect().top;
-      const leftElementBottom =
-        slideInLeftElement.getBoundingClientRect().bottom;
-
-      // Calculate the position of the right element relative to the viewport
-      const rightElementTop = slideInRightElement.getBoundingClientRect().top;
-      const rightElementBottom =
-        slideInRightElement.getBoundingClientRect().bottom;
-
-      // If the left element is in the viewport, trigger slide-in animation
-      if (leftElementTop < window.innerHeight && leftElementBottom > 0) {
-        setIsVisibleLeft(true);
-      } else {
-        setIsVisibleLeft(false); // Slide back when scrolled out of view
-      }
-
-      // If the right element is in the viewport, trigger slide-in animation
-      if (rightElementTop < window.innerHeight && rightElementBottom > 0) {
-        setIsVisibleRight(true);
-      } else {
-        setIsVisibleRight(false); // Slide back when scrolled out of view
-      }
-    };
-
-    // Add event listener for scroll
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Empty dependency array to ensure effect runs only once
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: "ease-in-out-quart",
+      delay: 100,
+    });
+  }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center p-2 md:p-10 about-outer">
-      <div
-        className={`w-full md:w-1/2 about-slide-in-left ${
-          isVisibleLeft ? "active" : ""
-        }`}
-      >
+    <div className="z-10 flex flex-col md:flex-row justify-center items-center p-2 md:p-10 about-outer">
+      <div className="w-full md:w-1/2" data-aos="fade-down-right">
         <div className="glass p-8 border-none">
           <div className="text-xl md:text-3xl mb-5 font-anta flex justify-center items-center">
             ABOUT US
@@ -74,9 +40,8 @@ const About = () => {
         </div>
       </div>
       <div
-        className={`w-full md:w-1/2 flex justify-center about-slide-in-right ${
-          isVisibleRight ? "active" : ""
-        }`}
+        className="w-full md:w-1/2 flex justify-center about-slide-in-right"
+        data-aos="fade-up-left"
       >
         <img src={T77_logopng} className="w-3/5"></img>
       </div>

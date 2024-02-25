@@ -29,7 +29,10 @@ const Home = () => {
   return (
     <div className="bg-[#0f0f0f] cursor-default overflow-hidden">
       {/* Main Heading */}
-      <div className="min-h-96 pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center items-center overflow-hidden">
+      <div
+        id="home"
+        className="min-h-96 pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center items-center overflow-hidden"
+      >
         <div className="min-h-96 w-full pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center items-center overflow-hidden backGround">
           <div
             onMouseEnter={handleMouseEnter}
@@ -69,14 +72,14 @@ const Home = () => {
       </div>
 
       {/* About Section */}
-      <div className="box">
+      <div id="about" className="box">
         <div className="p-5 md:p-10 text-white">
           <About />
         </div>
       </div>
 
       {/* Main Carousel Section */}
-      <div className="bg-black min-h-[525px] md:min-h-screen text-white flex flex-col justify-center justify-between md:py-20">
+      <div className="bg-black min-h-[525px] md:min-h-screen text-white flex flex-col justify-center  md:py-20">
         <h1 className="text-3xl md:text-6xl text-center mt-2 mb-10 font-anta text-sky-500 font-bold">
           Our Pro-Events
         </h1>
