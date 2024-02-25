@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 .waviy {
   position: relative;
@@ -27,4 +27,76 @@
   20% {
     transform: translateY(-5px);
   }
+} */
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.75s;
+}
+.box {
+  background-image: url("../assets/about-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+  font-weight: lighter;
+  color: #d400b8;
+  background: #ed6823;
+  background: linear-gradient(to right, #ed6823 0%, #891fcc 50%, #4b5de9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 1000;
+  opacity: 1; /* Initially set opacity to 0 */
+  transition: opacity 0.5s ease;
+}
+
+.main-title {
+  animation-name: slideLeft;
+  animation-duration: 2s;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes bgSlideDown {
+  from {
+    transform: translateY(-200vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.backGround {
+  animation: bgSlideDown 1s;
+}
+
+@keyframes cardAnimate {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.card-animate {
+  animation: cardAnimate 0.5s;
 }

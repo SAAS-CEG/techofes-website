@@ -1,20 +1,8 @@
-.slide-in-left,
-.slide-in-right {
-  opacity: 0;
-  transition: opacity 0.5s, transform 0.5s;
-  overflow-x: hidden;
-}
-
-.slide-in-left {
-  transform: translateX(-100%);
-}
-
-.slide-in-right {
-  transform: translateX(100%);
-}
-
-.slide-in-left.active,
-.slide-in-right.active {
-  opacity: 1;
-  transform: translateX(0);
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px 0 rgba(62, 164, 196, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

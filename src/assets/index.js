@@ -10,5 +10,6 @@ import img4 from './img4.jpeg';
 import img5 from './img5.jpeg';
 import img6 from './img6.jpg';
 import img7 from './img7.jpeg';
+import pro1 from './pro events/pro1.svg';
 
-export { T77_logojpg, T77_logopng, img1, img2, concertNight, djNight, concertNightSmall, img3, img4, img5, img6, img7 };
+export { T77_logojpg, T77_logopng, img1, img2, concertNight, djNight, concertNightSmall, img3, img4, img5, img6, img7, pro1 };

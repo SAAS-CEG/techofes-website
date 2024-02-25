@@ -1,0 +1,20 @@
+#title {
+	font-weight: lighter;
+	color: #d400b8;
+	background: #ed6823;
+	background: linear-gradient(to right, #ed6823 0%, #891fcc 50%, #4b5de9 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 1000;
+}
+
+.glass {
+	/* From https://css.glass */
+	background: rgba(165, 158, 158, 0.1);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(15.5px);
+	-webkit-backdrop-filter: blur(15.5px);
+	border: 1px solid rgba(165, 158, 158, 0.85);
+}
