@@ -31,8 +31,8 @@ const CountdownTimer = ({ timeTillDate, timeFormat }) => {
 	const { days, hours, minutes, seconds } = countdownValues;
 
 	return (
-		<div className="countdown-container">
-			<h1 className="text-2xl text-white mb-4">Days to go</h1>
+		<div className="countdown-container mt-4">
+			<h1 className="text-4xl text-white mb-4">Days to go</h1>
 			<div className="countdown-wrapper">
 				{days && (
 					<div className="countdown-item border rounded-full">

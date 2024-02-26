@@ -16,7 +16,7 @@ const Sponsors = () => {
 	}
 
 	return (
-		<div>
+		<div className="h-screen">
 			<Particles id="tsparticles" init={loadParticles} options={snowParticleConfig} />
 			<div className="h-full pb-11 mt-20 cursor-default">
 				<div className="flex items-center justify-center p-11 text-3xl md:text-5xl text-white font-anta">
@@ -24,8 +24,8 @@ const Sponsors = () => {
 				</div>
 
 				<div className="flex justify-center">
-					<div className="flex w-4/5 p-5 md:p-10 rounded-xl mb-20">
-						{imgs.map((el, index) => {
+					{/* <div className="flex w-4/5 p-5 md:p-10 rounded-xl mb-20"> */}
+					{/* {imgs.map((el, index) => {
 							return (
 								<div key={index} className="w-full md:w-1/2 my-2 sm:px-2 mx-3 lg:w-1/3 hover:scale-105 transition duration-300 ease-in-out">
 									<div className="rounded-xl shadow-lg bg-cover text-white">
@@ -37,7 +37,10 @@ const Sponsors = () => {
 									</div>
 								</div>
 							);
-						})}
+						})} */}
+					{/* </div> */}
+					<div className="flex justify-center items-center">
+						<h1 className="text">Coming soon...</h1>
 					</div>
 				</div>
 			</div>
