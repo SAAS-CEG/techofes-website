@@ -1,0 +1,12 @@
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.navbar {
+  animation-name: slideDown;
+  animation-duration: 1s; /* Adjust duration and timing function as needed */
+}
