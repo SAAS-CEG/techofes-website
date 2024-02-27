@@ -1,22 +1,22 @@
-import React from "react";
-import "./Loader.css";
+// import React from "react";
+import './Loader.css';
 
 const Loader = () => {
-  return (
-    <div className="box h-screen">
-      <div className="loading-container">
-        <div className="loading-text">
-          <span>L</span>
-          <span>O</span>
-          <span>A</span>
-          <span>D</span>
-          <span>I</span>
-          <span>N</span>
-          <span>G</span>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className='box h-screen'>
+			<div className='loading-container'>
+				<div className='loading-text'>
+					<span>L</span>
+					<span>O</span>
+					<span>A</span>
+					<span>D</span>
+					<span>I</span>
+					<span>N</span>
+					<span>G</span>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Loader;

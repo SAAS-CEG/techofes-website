@@ -1,20 +1,27 @@
-import { useState } from "react";
-import { eventRegistrationDetails } from "../constants/constants";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { eventRegistrationDetails } from '../constants/constants';
+import { useNavigate } from 'react-router-dom';
 
 const Homeve = () => {
-  //   console.log(eventRegistrationDetails);
-  const [events] = useState(eventRegistrationDetails.slice(0, 3));
-  //   console.log(events);
+	//   console.log(eventRegistrationDetails);
+	const [events] = useState(eventRegistrationDetails.slice(0, 3));
+	//   console.log(events);
 
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  return (
-    <div className="md:pt-5 pb-20 md:pb-0">
-      <div className="flex justify-center items-center text-6xl py-10">
-        <h1 className="font-anta text-white text-3xl md:text-6xl">Events</h1>
-      </div>
-      <div className="md:p-5 flex gap-5 justify-center items-center flex-wrap">
+	return (
+		<div className='md:pt-5 pb-20 md:pb-0'>
+			<div className='flex justify-center items-center text-6xl py-10'>
+				<h1 className='font-anta text-white text-3xl md:text-6xl'>Events</h1>
+			</div>
+			<div className='flex justify-center'>
+				{/* <div className='flex w-4/5 p-5 md:p-10 rounded-xl mb-20'></div> */}
+				<div className=''>
+					<h1 className='text'>Coming soon...</h1>
+				</div>
+			</div>
+
+			{/* <div className="md:p-5 flex gap-5 justify-center items-center flex-wrap">
         {events.map((event, index) => {
           return (
             <div
@@ -34,9 +41,9 @@ const Homeve = () => {
         >
           view more...
         </button>
-      </div>
-    </div>
-  );
+      </div> */}
+		</div>
+	);
 };
 
 export default Homeve;
