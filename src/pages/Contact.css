@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 .bk {
-	/* From https://css.glass */
-	background: rgba(178, 190, 196, 0.062);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(4.2px);
-	-webkit-backdrop-filter: blur(4.2px);
+  background: rgba(178, 190, 196, 0.062);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  line-height: 3;
+  font-family: "Poppins", sans-serif;
 }

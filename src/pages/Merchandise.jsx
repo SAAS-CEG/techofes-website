@@ -1,5 +1,4 @@
 import "./Merchandise.css";
-import { ThreeDCardDemo } from "../components/Card3d";
 
 const Merchandise = () => {
   return (
@@ -9,12 +8,15 @@ const Merchandise = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-around items-center w-full min-h-[500px] px-10 mb-20 bg-zinc-900 text-white md:mt-5 pb-8">
         <div className="flex gap-x-10 justify-center items-center w-2/3 md:w-[50%]">
-          <ThreeDCardDemo />
+          <img
+            className="h-96 w-96 rounded-2xl skew"
+            src="https://akirastreetwear.com/cdn/shop/files/IchigoKastenshirt.png?v=1691156526"
+          />
         </div>
 
         <div className="md:ml-20 mt-16 md:mt-0 w-full md:w-[50%]">
           <h1 className="text-2xl md:text-4xl tracking-wider font-bold font-anta mb-5">
-            Techofes shirt
+            Techofes T-shirt
           </h1>
           <div className="mb-4">
             <h2 className="text-lg md:text-2xl mb-2">Product details</h2>
@@ -35,24 +37,68 @@ const Merchandise = () => {
             </button>
             <button className="bg-gray-700 px-2 py-1 rounded-md text-xs">
               <p>M</p>
-              <p>32</p>
+              <p>36</p>
             </button>
             <button className="bg-gray-700 px-2 py-1 rounded-md text-xs">
               <p>L</p>
-              <p>32</p>
+              <p>40</p>
             </button>
             <button className="bg-gray-700 px-2 py-1 rounded-md text-xs">
               <p>XL</p>
-              <p>32</p>
+              <p>44</p>
             </button>
           </div>
 
           {/* amount */}
           <div className="flex items-center gap-4">
-            <p className="text-xl">Price: Rs 300</p>
+            <p className="text-xl">Price: Rs 600</p>
           </div>
           <button className="bg-green-600 rounded-lg button p-4 mt-5 text-base md:text-lg hover:scale-110 transition duration-100 ease-in-out">
             Buy Now
+          </button>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-around items-center w-full min-h-[500px] px-10 mb-20 bg-zinc-900 text-white md:mt-5 pb-8">
+        <div className="flex gap-x-10 justify-center items-center w-2/3 md:w-[50%]">
+          <img
+            className="h-96 w-96 rounded-2xl"
+            src="https://www.theyouthspace.in/cdn/shop/files/WhatsAppImage2024-01-18at10.42.47AM.jpg?v=1705644415&width=2048"
+          />
+        </div>
+        <div className="md:ml-20 mt-16 md:mt-0 w-full md:w-[50%]">
+          <h1 className="text-2xl md:text-4xl tracking-wider font-bold font-anta mb-5">
+            Techofes figurine
+          </h1>
+          <div className="flex items-center gap-4">
+            <p className="text-xl">Price: Rs 2000</p>
+          </div>
+          <button
+            className="bg-slate-600 rounded-lg  p-4 mt-5 text-base md:text-lg "
+            disabled
+          >
+            Coming soon
+          </button>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-around items-center w-full min-h-[500px] px-10 mb-20 bg-zinc-900 text-white md:mt-5 pb-8">
+        <div className="flex gap-x-10 justify-center items-center w-2/3 md:w-[50%]">
+          <img
+            className="w-96 h-96 rounded-2xl"
+            src="https://cdn.vibecity.in/providers/6310d2268b421a0011f0fdae/1000145191_1f216a40-86bc-4951-b921-25beb38edf8a-3X.png"
+          />
+        </div>
+        <div className="md:ml-20 mt-16 md:mt-0 w-full md:w-[50%]">
+          <h1 className="text-2xl md:text-4xl tracking-wider font-bold font-anta mb-5">
+            Techofes keychain
+          </h1>
+          <div className="flex items-center gap-4">
+            <p className="text-xl">Price: Rs 200</p>
+          </div>
+          <button
+            className="bg-slate-600 rounded-lg  p-4 mt-5 text-base md:text-lg "
+            disabled
+          >
+            Coming soon
           </button>
         </div>
       </div>
