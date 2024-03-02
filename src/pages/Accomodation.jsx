@@ -1,5 +1,3 @@
-import { loadSlim } from "tsparticles-slim";
-
 const Accomodation = () => {
   return (
     <div>

@@ -1,9 +1,5 @@
 import { Button, TextField } from "@mui/material";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useForm } from "react-hook-form";
-import { DateField } from "@mui/x-date-pickers";
 
 const Registration = () => {
   const { register, handleSubmit, formState } = useForm();
@@ -11,10 +7,6 @@ const Registration = () => {
 
   function onSubmit(data) {
     console.log(data);
-  }
-
-  async function loadParticles(main) {
-    await loadSlim(main);
   }
 
   const sxx = {

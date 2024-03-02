@@ -3,11 +3,8 @@ import About from "../components/about/About";
 import RevolveCarousel from "../components/revolveCarousel/revolveCarousel";
 import Homeve from "../components/Homeve";
 import "./Home.css";
-import Logo from "../../src/assets/logo.png";
 import { useState, useEffect } from "react";
 import ProEventCard from "../components/proEventCard/ProEventCard";
-import Sponsors from "./Sponsors";
-import Confetti from "./Confetti";
 import ConfettiComp from "./Confetti";
 import Countdown from "./timer";
 

@@ -8,16 +8,14 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import { pages, settings } from "../../constants/constants";
+import { pages } from "../../constants/constants";
 import { Link } from "react-router-dom";
 import HeaderButton from "./header-button";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./Header.css";
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [hover, setHover] = React.useState(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Set isVisible to true after a short delay to allow the component to render

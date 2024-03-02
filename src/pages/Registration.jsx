@@ -13,10 +13,6 @@ const Registration = () => {
     console.log(data);
   }
 
-  async function loadParticles(main) {
-    await loadSlim(main);
-  }
-
   const sxx = {
     input: {
       color: "white",

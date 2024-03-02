@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "./ProEventCard.css";
 import "./TextAnimation.css";
-import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
