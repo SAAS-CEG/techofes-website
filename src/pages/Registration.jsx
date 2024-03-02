@@ -5,10 +5,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useForm } from "react-hook-form";
 import { DateField } from "@mui/x-date-pickers";
 
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
-import ParticleConfig from "../particles/ParticleConfig";
-
 const Registration = () => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
@@ -52,11 +48,6 @@ const Registration = () => {
 
   return (
     <>
-      <Particles
-        id="tsparticles"
-        init={loadParticles}
-        options={ParticleConfig}
-      />
       <div className="flex flex-col justify-center items-center my-10 mt-28">
         <div className="justify-center items-center h-[1350px] px-20 rounded-2xl bg-gray-300/10 shadow-2xl text-blue-500">
           <h1 className="text-3xl md:text-4xl text-white my-5 justify-center items-center flex font-anta ">

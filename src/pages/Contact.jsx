@@ -3,24 +3,52 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="mt-20 cursor-default bg-gradient-to-r from-stone-900 to-slate-900   break-all">
+    <div className="mt-20 cursor-default bg-g   break-all">
       <div className="flex items-center justify-center p-11 text-3xl md:text-6xl text-white font-anta">
-        <h1>CONTACT US</h1>
+        <h1 className="font-anta font-bold">CONTACT US</h1>
       </div>
       <div className="w-full flex flex-col justify-center text-center items-center text-white font-anta">
-        <h2 className="text-center md:text-4xl text-2xl">SPONSORSHIP</h2>
-        <div className="bk my-6 text-sm md:text-lg md:p-6 p-4">
-          <p>Manisha ( Corporate Relations ) : 6302831408</p>
-          <p>Vijay ( Corporate Relations ) : 8608556824</p>
-          <p>Email : corporaterelations@saasceg.com</p>
+        <h2 className="text-center md:text-4xl text-2xl font-anta font-bold">
+          CORPORATE RELATIONS
+        </h2>
+        <h3 className="text-center md:text-2xl text-xl">
+          (For Sponshorship Queries)
+        </h3>
+        <div className="flex flex-wrap w-full justify-evenly">
+          <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
+            <p>Manisha</p>
+            <p>6302831408</p>
+          </div>
+          <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
+            <p>Vijay</p>
+            <p>8608556824</p>
+          </div>
+          <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
+            <p>Email</p>
+            <p>corporaterelations@saasceg.com</p>
+          </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center text-center items-center text-white font-anta mt-4">
-        <h2 className="text-center md:text-4xl text-2xl">GENERAL QUERIES</h2>
-        <div className="bk my-6 text-sm md:text-lg md:p-6 p-4">
-          <p>Jayaharish (HR) : 9597942324</p>
-          <p>Sivanitha (HR) : 8825702662</p>
-          <p>Email : saas.ceg.official@gmail.com</p>
+      <div className="w-full flex flex-col justify-center text-center items-center text-white font-anta mt-8">
+        <h2 className="text-center md:text-4xl text-2xl font-anta font-bold">
+          HUMAN RESOURCES
+        </h2>
+        <h3 className="text-center md:text-2xl text-xl">
+          (For General Queries)
+        </h3>
+        <div className="flex flex-wrap w-full justify-evenly">
+          <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4  py-2 px-4 ">
+            <p>Jayaharish</p>
+            <p>9597942324</p>
+          </div>
+          <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
+            <p>Sivanitha</p>
+            <p>8825702662</p>
+          </div>
+          <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
+            <p>Email</p>
+            <p>saas.ceg.official@gmail.com</p>
+          </div>
         </div>
       </div>
 

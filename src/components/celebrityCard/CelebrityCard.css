@@ -1,36 +1,36 @@
 .card {
-  font-weight: bold;
-  padding: 1em;
-  text-align: right;
-  color: #181a1a;
+	font-weight: bold;
+	padding: 1em;
+	text-align: right;
+	color: #181a1a;
 
-  width: 300px;
-  height: 400px;
-  box-shadow: 0 1px 5px #00000099;
+	width: 300px;
+	height: 300px;
+	box-shadow: 0 1px 5px #00000099;
 
-  border-radius: 10px;
-  background-size: cover;
-  background-image: url(https://imgs.search.brave.com/6ZP-DefpiizKLTenpYUjnFDRXEorGDatoLYXefFMb70/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzUxLzRk/LzViLzUxNGQ1YmM5/ZGRhYzg3NjFhMjBl/YTVhZWY1ZmM5OGFj/LmpwZw);
+	border-radius: 10px;
+	background-size: cover;
+	background-image: url(https://imgs.search.brave.com/6ZP-DefpiizKLTenpYUjnFDRXEorGDatoLYXefFMb70/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzUxLzRk/LzViLzUxNGQ1YmM5/ZGRhYzg3NjFhMjBl/YTVhZWY1ZmM5OGFj/LmpwZw);
 
-  position: relative;
+	position: relative;
 
-  transition-duration: 300ms;
-  transition-property: transform, box-shadow;
-  transition-timing-function: ease-out;
-  transform: rotate3d(0);
+	transition-duration: 300ms;
+	transition-property: transform, box-shadow;
+	transition-timing-function: ease-out;
+	transform: rotate3d(0);
 }
 
 .card:hover {
-  transition-duration: 150ms;
-  box-shadow: 0 5px 20px 5px #00000044;
+	transition-duration: 150ms;
+	box-shadow: 0 5px 20px 5px #00000044;
 }
 
 .glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
 
-  /*background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);*/
+	/*background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);*/
 }

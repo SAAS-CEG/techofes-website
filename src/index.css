@@ -4,4 +4,20 @@
 
 body {
   background-color: #000;
+  color: white;
+  background-image: radial-gradient(#2f225b, #170d4d, #151543, #05092a);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(rgb(21, 81, 232), rgb(1, 131, 18));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(255, 64, 0);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 0, 0);
 }

@@ -1,119 +1,175 @@
-import About from '../components/about/About';
-import CelebrityCard from '../components/celebrityCard/CelebrityCard';
-import RevolveCarousel from '../components/revolveCarousel/revolveCarousel';
-import Homeve from '../components/Homeve';
-import './Home.css';
-import Logo from '../../src/assets/T77_logo.png';
-import { useState } from 'react';
-import ProEventCard from '../components/proEventCard/ProEventCard';
-import Sponsors from './Sponsors';
-import CountDownTimer from '../components/countDownTimer/CountDownTimer';
+import About from "../components/about/About";
+// import CelebrityCard from "../components/celebrityCard/CelebrityCard";
+import RevolveCarousel from "../components/revolveCarousel/revolveCarousel";
+import Homeve from "../components/Homeve";
+import "./Home.css";
+import Logo from "../../src/assets/logo.png";
+import { useState, useEffect } from "react";
+import ProEventCard from "../components/proEventCard/ProEventCard";
+import Sponsors from "./Sponsors";
+import Confetti from "./Confetti";
+import ConfettiComp from "./Confetti";
+import Countdown from "./timer";
 
 const Home = () => {
-  const [hover, setHover] = useState(false);
-  const [animationComplete, setAnimationComplete] = useState(null);
+  const [video, setVideo] = useState(true);
+  const [showConfetti, setShowConfetti] = useState(false);
 
-  const handleAnimationEnd = () => {
-    setAnimationComplete(true);
-  };
+  useEffect(() => {
+    const video = document.getElementById("homeVideo");
+    video.play().catch((error) => {
+      console.error("Video play error:", error);
+    });
+    setTimeout(() => {
+      setVideo(false);
+      setShowConfetti(true);
+    }, 6000);
 
-  const handleMouseEnter = () => {
-    if (animationComplete) {
-      setHover(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setHover(false);
-  };
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 5000);
+  }, []);
 
   return (
-    <div className="bg-[#0f0f0f] cursor-default overflow-hidden">
-      {/* Main Heading */}
+    <div className="cursor-default overflow-hidden">
       <div
         id="home"
-        className="min-h-96 pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center items-center overflow-hidden"
+        className="min-h-96 pt-14 md:pt-0 md:min-h-[120vh] flex flex-col justify-center items-center overflow-hidden relative"
       >
-        <div className="min-h-96 w-full pt-14 md:pt-0 md:min-h-[100vh] flex flex-col justify-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center items-center overflow-hidden backGround">
-          <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onAnimationEnd={handleAnimationEnd}
-            className="flex items-center main-title"
-          >
-            {!hover && (
-							<div>
-	              <div
-                id="title"
-                className={`text-8xl w-full text-center ${
-                  !hover ? "animate-in" : ""
-                }`}
+        {video && (
+          <div className="min-h-48 w-full pt-14 md:pt-0 md:min-h-[100vh]  backGround flex items-center lg:block">
+            <div className="flex items-center main-title relative w-full md:h-[120vh]">
+              <video
+                id="homeVideo"
+                autoPlay
+                muted
+                className="hidden lg:block  absolute top-0 left-0 min-w-full min-h-full object-cover "
               >
-	                South India's Biggest <br /> SaaS Event is here!!
-								</div>
-								<div className="z-50">
-									<CountDownTimer timeTillDate="05 26 2024, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
-								</div>
-              </div>
-            )}
-            {hover && (
+                <source src="\events\Tiny_Coding.mp4" type="video/mp4" />
+              </video>
               <div
-                className={`w-full justify-between items-center ${
-                  hover ? "flex animate-in" : "hidden"
-                }`}
+                id="title"
+                className="text-3xl w-full justify-center md:text-6xl lg:text-8xl text-center flex p-0 m-0 z-10 "
+                style={{ fontFamily: "Luckiest Guy" }}
               >
-                <div id="title" className="text-8xl text-left w-2/3">
-                  South India's <br />
-                  Biggest <br />
-                  SaaS Event is <br />
-                  here!!
-                </div>
-                <div className="w-1/2 p-10">
-                  <img src={Logo} className="w-full h-full" />
-                </div>
+                <span>
+                  S <br /> C
+                </span>
+                <span>
+                  o <br /> u
+                </span>
+                <span>
+                  u <br /> l
+                </span>
+                <span>
+                  t <br /> t
+                </span>
+                <span>
+                  h <br /> u
+                </span>
+                <span>
+                  {} <br /> r
+                </span>
+                <span>
+                  I <br /> a
+                </span>
+                <span>
+                  n <br /> l
+                </span>
+                <span>
+                  d <br /> {}
+                </span>
+                <span>
+                  i <br /> E
+                </span>
+                <span>
+                  a <br /> v
+                </span>
+                <span>
+                  ' <br /> e
+                </span>
+                <span>
+                  s <br /> n
+                </span>
+                <span>
+                  {} <br /> t
+                </span>
+                <span>
+                  B <br /> {}
+                </span>
+                <span>
+                  i <br /> i
+                </span>
+                <span>
+                  g <br /> s
+                </span>
+                <span>
+                  g <br /> {}
+                </span>
+                <span>
+                  e <br /> h
+                </span>
+                <span>
+                  s <br /> e
+                </span>
+                <span>
+                  t <br /> r
+                </span>
+                <span>
+                  {} <br /> e
+                </span>
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
+        {!video && (
+          <>
+            <div className="title-text disp flex flex-col pb-10 lg:pb-3">
+              {showConfetti && <ConfettiComp />}
+              <div
+                className="mt-9 z-1 text-5xl md:text-8xl lg:text-9xl pb-2 text-center names  main"
+                style={{
+                  fontFamily: "Kavoon",
+                  backgroundImage:
+                    "linear-gradient(to right, #FFFF99, #FFD700)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Techofes'77
+              </div>
+              <div className=" date mt-2 mb-2 md:mt-5 text-center w-full text-1xl md:text-3xl lg:text-3xl names font-extralight text-[#FFFF99]">
+                Mar 13 - Mar 16
+              </div>
+              <div className="timers">
+                <Countdown />
+              </div>
+            </div>
+            {/* <img src="public\events\T77_logo_gold_wh iteborder-01.png" alt='img' className='w-full h-full' /> */}
+          </>
+        )}
       </div>
-
       {/* About Section */}
       <div id="about" className="box">
         <div className="p-5 md:p-10 text-white">
           <About />
         </div>
       </div>
-
-			{/* Main Carousel Section */}
-			<div className="bg-black min-h-[525px] md:min-h-screen text-white flex flex-col justify-center md:py-20">
-				<h1 className="text-3xl md:text-6xl text-center mt-2 mb-10 font-anta text-sky-500 font-bold">Our Pro-Events</h1>
-				{/* <RevolveCarousel /> */}
-				<ProEventCard />
-				<div className="text-center text-orange-400 text-6xl font-bold mt-20">25+ INTERESTING EVENTS</div>
-			</div>
-
-      {/* Celebrities Section */}
-      {/* Gradient background style : bg-gradient-to-r from-slate-900 to-slate-700 */}
-      {/*  <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
-        <div className="py-10">
-          <div className="text-center text-3xl font-bold md:text-6xl font-anta text-white">
-            Celebrities
-          </div>
-          <div className="md:px-20 mt-14 w-full justify-around items-center flex-wrap flex gap-10">
-            <CelebrityCard classId="celebrity-card1 card-animate" />
-            <CelebrityCard classId="celebrity-card2" />
-            <CelebrityCard classId="celebrity-card3" />
-          </div>
+      {/* Main Carousel Section */}
+      <div className="h-full md:h-full text-white flex flex-col justify-center item-center  ">
+        <div className="text-center h-24 text-orange-400 text-6xl font-bold mt-20 ">
+          70+ INTERESTING EVENTS
         </div>
-      </div> */}
-      <Sponsors />
+        <RevolveCarousel />
+        <ProEventCard />
+      </div>
 
       {/* Events Section */}
-      {/* <div className="bg-black min-h-screen bg-fixed bg-no-repeat bg-cover">
-				<Homeve />
-		</div> */}
-		</div>
-	);
+      <div className=" h-full bg-fixed bg-no-repeat bg-cover mb-[70px]">
+        <Homeve />
+      </div>
+    </div>
+  );
 };
 
 export default Home;
