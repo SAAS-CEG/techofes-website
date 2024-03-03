@@ -54,6 +54,10 @@ function Header() {
 								aria-haspopup='true'
 								onClick={handleOpenNavMenu}
 								color='inherit'
+								anchorOrigin = {{
+									vertical: 'top',
+									horizontal: 'right'
+								}}
 							>
 								<MenuIcon />
 							</IconButton>
@@ -121,6 +125,7 @@ function Header() {
 									justifyContent: 'space-between', // Separate the links with the logo
 									alignItems: 'center',
 								},
+								size: '80%'
 							}}
 						>
 							{/* Links without the logo */}

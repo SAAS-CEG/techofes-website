@@ -25,7 +25,7 @@ a {
 h1 {
   margin-bottom: 60px;
   text-align: center;
-  font: 300 2.25em "Luckiest Guy";
+  font: 300 2.25em "Anta";
   text-transform: uppercase;
 }
 h1 strong {
@@ -36,7 +36,7 @@ h1 strong {
 h2 {
   margin-bottom: 80px;
   text-align: center;
-  font: 300 0.7em "Luckiest Guy";
+  font: 300 0.7em "Anta";
   text-transform: uppercase;
 }
 h2 strong {
@@ -62,7 +62,7 @@ h2 strong {
 .countdown .count-title {
   display: block;
   margin-bottom: 15px;
-  font: normal 1.4em "Luckiest Guy";
+  font: normal 1.4em "Anta";
   color: white;
   text-transform: uppercase;
 }
@@ -83,7 +83,7 @@ h2 strong {
   left: 0;
   right: 0;
   margin: auto;
-  font: normal 5.94em/107px "Luckiest Guy";
+  font: normal 5.94em/107px "Anta";
   font-weight: 700;
   color: #de4848;
 }
@@ -166,7 +166,7 @@ h2 strong {
     left: 0;
     right: 0;
     margin: auto;
-    font: normal 50px "Luckiest Guy";
+    font: normal 50px "Anta";
     font-weight: 700;
     color: #de4848;
   }

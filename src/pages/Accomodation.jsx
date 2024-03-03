@@ -20,8 +20,8 @@ const Accomodation = () => {
 					</h2>
 				</div>
 				<div className='sm:mt-20 mt-10 flex flex-wrap sm:w-full  justify-evenly sm:justify-center sm:gap-8 gap-6'>
-					<p className='sm:px-8 px-4 py-2 sm:py-4 text-lg  sm:text-2xl bg-green-600 rounded-2xl'>
-						Coming soon...
+					<p className='sm:px-8 px-4 py-2 sm:py-4 text-lg  sm:text-2xl bg-cyan-800 rounded-2xl'>
+						Registrations open soon
 					</p>
 				</div>
 			</div>

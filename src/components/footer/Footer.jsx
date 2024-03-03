@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<div
 			id='top'
-			className='mt-auto p-4 flex w-full flex-col justify-center items-center gap-y-2 text-white font-courgette '
+			className='mt-auto p-4 flex w-full flex-col justify-center items-center gap-y-2 text-white font-anta '
 		>
 			<ul className='social-icon flex gap-x-4 text-white'>
 				<li className='hover:rotate-[360deg] hover:scale-110 transition duration-300'>

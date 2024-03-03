@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #111927;
-  color: white;
-  background-image: radial-gradient(#2f225b, #170d4d, #151543, #05092a);
+  background-image: url("/src/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  /* background-image: radial-gradient(#2f225b, #170d4d, #151543, #05092a); */
 }
 ::-webkit-scrollbar {
   width: 10px;

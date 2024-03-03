@@ -5,9 +5,6 @@ const RevolveCarousel = () => {
     <div className="hidden lg:block pic-ctn lg:flex justify-center relative item-center top-100  text-base md:text-2xl px-5 md:p-0">
       <h1
         className="text-3xl md:text-6xl absolute top-[100px] text-center mt-2  z-10 mb-10 font-anta font-bold"
-        style={{
-          fontFamily: "Luckiest Guy",
-        }}
       >
         Our Pro-Shows
       </h1>
