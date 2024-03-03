@@ -29,12 +29,9 @@ const Footer = () => {
 					</Link>
 				</li>
 			</ul>
-			<ul className='menu flex gap-x-4'>
+			<ul className='menu flex gap-x-2 md:gap-x-4 text-xs md:text-lg'>
 				<li className=' hover:font-bold'>
 					<Link to='/events'>Events</Link>
-				</li>
-				<li className=' hover:font-bold'>
-					<Link to='/sponsors'>Sponsors</Link>
 				</li>
 				<li className=' hover:font-bold'>
 					<Link to='/accomodation'>Accomodation</Link>
@@ -46,7 +43,7 @@ const Footer = () => {
 					<Link to='/contact'>Contact</Link>
 				</li>
 			</ul>
-			<div className='flex-col'>
+			<div className='flex-col  text-xs md:text-lg'>
 				<Link
 					href='https://saasceg.in/'
 					className='items-center	justify-center'

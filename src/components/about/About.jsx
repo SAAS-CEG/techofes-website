@@ -17,7 +17,7 @@ const About = () => {
 	return (
 		<div className='z-10 flex justify-center items-center p-2 md:p-10 mt-20 '>
 			<div className='w-full'>
-				<div className='glass p-8 border-none h-full'>
+				<div className='glass p-5 border-none h-full'>
 					<div className='text-xl md:text-5xl mb-10 font-anta flex justify-center items-center'>
 						ABOUT US
 					</div>

@@ -152,7 +152,7 @@ const Home = () => {
 				id='about'
 				className='box'
 			>
-				<div className='p-5 md:p-10 text-white'>
+				<div className=' md:p-10 text-white'>
 					<About />
 				</div>
 			</div>
