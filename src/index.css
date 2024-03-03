@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #000;
+  background-color: #111927;
   color: white;
   background-image: radial-gradient(#2f225b, #170d4d, #151543, #05092a);
 }
@@ -11,7 +11,7 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: linear-gradient(rgb(21, 81, 232), rgb(1, 131, 18));
+  background: linear-gradient(hsl(202.42, 77%, 40%), rgb(1, 107, 131));
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {

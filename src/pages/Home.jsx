@@ -129,7 +129,6 @@ const Home = () => {
 							<div
 								className='mt-9 z-1 text-5xl md:text-8xl lg:text-9xl pb-2 text-center names  main'
 								style={{
-									fontFamily: 'Kavoon',
 									backgroundImage:
 										'linear-gradient(to right, #FFFF99, #FFD700)',
 									WebkitBackgroundClip: 'text',
@@ -157,9 +156,6 @@ const Home = () => {
 				</div>
 			</div>
 			<div className='h-full md:h-full text-white flex flex-col justify-center item-center  '>
-				<div className='text-center h-24 text-orange-400 text-6xl font-bold mt-20 '>
-					70+ INTERESTING EVENTS
-				</div>
 				<RevolveCarousel />
 				<ProEventCard />
 			</div>

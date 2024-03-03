@@ -39,7 +39,7 @@ function Header() {
 				position='static'
 				className='z-50 top-0 py-2'
 				style={{
-					backgroundColor: 'rgba(0, 0, 0, 0.9)', // Semi-transparent black
+					backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black
 					position: 'sticky',
 					backdropFilter: 'blur(5px)',
 				}}
