@@ -25,6 +25,4 @@ const pages = [
 	{ id: '7', name: 'Contact', link: '/contact' },
 ];
 
-const settings = ['Profile', 'Dashboard', 'Logout'];
-
-export { eventRegistrationDetails, pages, settings };
+export { eventRegistrationDetails, pages };

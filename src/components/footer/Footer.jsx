@@ -11,19 +11,19 @@ const Footer = () => {
 		>
 			<ul className='social-icon flex gap-x-4 text-white'>
 				<li className='hover:rotate-[360deg] hover:scale-110 transition duration-300'>
-					<Link to='#'>
+					<Link to='https://www.linkedin.com/company/saasceg/'>
 						{' '}
 						<LinkedInIcon />
 					</Link>
 				</li>
 				<li className='hover:rotate-[360deg] hover:scale-110 transition duration-300'>
-					<Link to='#'>
+					<Link to='https://m.facebook.com/techofes.co.in'>
 						{' '}
 						<FacebookIcon />
 					</Link>
 				</li>
 				<li className='hover:rotate-[360deg] hover:scale-110 transition duration-300'>
-					<Link to='#'>
+					<Link to='https://www.instagram.com/techofes_official?igsh=aWI4Z2h1ZHp3OXh4'>
 						{' '}
 						<InstagramIcon />
 					</Link>
@@ -45,10 +45,11 @@ const Footer = () => {
 			</ul>
 			<div className='flex-col  text-xs md:text-lg'>
 				<Link
-					href='https://saasceg.in/'
+					target='blank'
+					to='https://saasceg.in/'
 					className='items-center	justify-center'
 				>
-					<p>©Copyright: SAAS 2024 of CEG, Anna University</p>
+					©Copyright: SAAS 2024 of CEG, Anna University
 				</Link>
 			</div>
 		</div>
