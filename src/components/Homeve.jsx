@@ -24,12 +24,7 @@ const Homeve = () => {
 							/>
 						);
 					})}
-					<a
-						className=''
-						href='/events'
-					>
-						View more..
-					</a>
+					<Link to="/events" className='text-white'>View more ...</Link>
 				</div>
 			</div>
 		</div>
