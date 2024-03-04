@@ -22,7 +22,7 @@ const Homeve = () => {
 						);
 					})}
 					<a
-						className=''
+						className='text-white'
 						href='/events'
 					>
 						View more..
