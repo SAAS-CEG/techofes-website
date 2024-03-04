@@ -1,4 +1,10 @@
 import "./revolveCarousel.css";
+import proshowbg1 from "../../assets/shows/2nd.webp";
+import proshowbg2 from "../../assets/shows/4th.webp";
+import proshowbg3 from "../../assets/shows/5th.webp";
+import proshowbg4 from "../../assets/shows/8th.webp";0
+import proshowbg5 from "../../assets/shows/6th.webp";
+
 
 const RevolveCarousel = () => {
   return (
@@ -10,28 +16,28 @@ const RevolveCarousel = () => {
       </h1>
       <div className="pic w-full	 md:w-full	 h-full	 flex flex-col items-center">
         <img
-          src="src\assets\shows\2nd.webp"
+          src={proshowbg1}
           alt=""
           className="w-screen h-screen"
         />
       </div>
       <div className="pic w-full	 md:w-full	h-full	 flex flex-col items-center">
         <img
-          src="src\assets\shows\4th.webp"
+          src={proshowbg2}
           alt=""
           className="w-screen h-screen"
         />
       </div>
       <div className="pic w-full	 md:w-full	h-full	 flex flex-col items-center">
         <img
-          src="src\assets\shows\5th.webp"
+          src={proshowbg3}
           alt=""
           className="w-screen h-screen"
         />
       </div>
       <div className="pic w-full	 md:w-full	h-full	 flex flex-col items-center">
         <img
-          src="src\assets\shows\6th.webp"
+          src={proshowbg4}
           alt=""
           className="w-screen h-screen"
         />
@@ -39,7 +45,7 @@ const RevolveCarousel = () => {
 
       <div className="pic w-full	 md:w-full	h-full	 flex flex-col items-center">
         <img
-          src="src\assets\shows\8th.webp"
+          src={proshowbg5}
           alt=""
           className="w-screen h-screen"
         />
