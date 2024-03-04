@@ -1,4 +1,5 @@
 import { eventRegistrationDetails } from '../constants/constants';
+import { Link } from 'react-router-dom';
 import FlipCard from './FlipCard';
 
 const Homeve = () => {
