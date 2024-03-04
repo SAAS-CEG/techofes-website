@@ -12,6 +12,7 @@ import { pages } from '../../constants/constants';
 import { Link } from 'react-router-dom';
 import HeaderButton from './header-button';
 import { useEffect } from 'react';
+import T77_logo from "../../assets/T77_logo.png";
 import './Header.css';
 
 function Header() {
@@ -108,7 +109,7 @@ function Header() {
 								className='sm:visible lg:hidden absolute left-[44%]'
 							>
 								<img
-									src='src\assets\logo.png'
+									src={T77_logo}
 									className='w-20 h-16 object-contain hover:cursor-pointer mx-auto'
 									alt='Logo'
 								/>
