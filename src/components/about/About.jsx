@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./About.css"; // Import CSS file for animation styles
-import T77_logo from "./../../assets/T77_logo.png";
+import T77_logo from "./../../assets/T77_logo_gold_whiteborder-01.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
