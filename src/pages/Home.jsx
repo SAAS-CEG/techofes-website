@@ -50,7 +50,7 @@ const Home = () => {
 							<div
 								id='title'
 								className='text-3xl w-full justify-center md:text-6xl lg:text-8xl text-center flex p-0 m-0 z-10 '
-								style={{ fontFamily: 'Luckiest Guy' }}
+								style={{ fontFamily: 'Anta' }}
 							>
 								<span>
 									S <br /> C
@@ -127,9 +127,8 @@ const Home = () => {
 						<div className='title-text disp flex flex-col pb-10 lg:pb-3'>
 							{showConfetti && <ConfettiComp />}
 							<div
-								className='mt-9 z-1 text-5xl md:text-8xl lg:text-9xl pb-2 text-center names  main'
+								className='mt-9 z-1 text-5xl md:text-8xl lg:text-9xl pb-2 text-center names  main font-playFair'
 								style={{
-									fontFamily: 'Kavoon',
 									backgroundImage:
 										'linear-gradient(to right, #FFFF99, #FFD700)',
 									WebkitBackgroundClip: 'text',
@@ -138,7 +137,7 @@ const Home = () => {
 							>
 								Techofes &apos;77
 							</div>
-							<div className=' date mt-2 mb-2 md:mt-5 text-center w-full text-1xl md:text-3xl lg:text-3xl names font-extralight text-[#FFFF99]'>
+							<div className=' date mt-2 mb-2 md:mt-5 text-center w-full text-1xl md:text-3xl lg:text-3xl names font-playfair font-medium text-[#FFFF99]'>
 								Mar 13 - Mar 16
 							</div>
 							<div className='timers'>

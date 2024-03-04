@@ -17,7 +17,6 @@ const eventRegistrationDetails = [
 
 const pages = [
 	{ id: '1', name: 'Home', link: '/#home' },
-	{ id: '2', name: 'About', link: '/about' },
 	{ id: '3', name: 'Events', link: '/events' },
 	{ id: '4', name: 'Accomodation', link: '/accomodation' },
 	{ id: '5', name: 'Merchandise', link: '/merchandise' },

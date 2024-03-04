@@ -7,9 +7,6 @@ const Homeve = () => {
 			<div className='flex justify-center items-center text-6xl py-10'>
 				<h1
 					className='font-anta text-white text-3xl md:text-6xl mt-20'
-					style={{
-						fontFamily: 'Luckiest Guy',
-					}}
 				>
 					Events
 				</h1>
@@ -25,7 +22,7 @@ const Homeve = () => {
 						);
 					})}
 					<a
-						className=''
+						className='text-white'
 						href='/events'
 					>
 						View more..
