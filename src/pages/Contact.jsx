@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material";
 import "./Contact.css";
+import { Button } from "react-daisyui";
 
 const Contact = () => {
   return (
@@ -17,15 +18,15 @@ const Contact = () => {
         <div className="flex flex-wrap w-full justify-evenly">
           <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
             <p>Manisha</p>
-            <p>6302831408</p>
+            <a href="tel:6302831408">6302831408</a>
           </div>
           <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
             <p>Vijay</p>
-            <p>8608556824</p>
+            <a href="tel:8608556824">8608556824</a>
           </div>
           <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
             <p>Email</p>
-            <p>corporaterelations@saasceg.com</p>
+            <a href="mailto:corporaterelations@saasceg.com">corporaterelations@saasceg.com</a>
           </div>
         </div>
       </div>
@@ -39,15 +40,15 @@ const Contact = () => {
         <div className="flex flex-wrap w-full justify-evenly">
           <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4  py-2 px-4 ">
             <p>Jayaharish</p>
-            <p>9597942324</p>
+            <a href="tel:9597942324">9597942324</a>
           </div>
           <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
             <p>Sivanitha</p>
-            <p>8825702662</p>
+            <a href="tel:8825702662">8825702662</a>
           </div>
           <div className="bk my-6 text-sm md:text-xl md:px-16 md:py-4 py-2 px-4">
             <p>Email</p>
-            <p>saas.ceg.official@gmail.com</p>
+            <a href="mailto:saas.ceg.official@gmail.com">saas.ceg.official@gmail.com</a>
           </div>
         </div>
       </div>
@@ -180,6 +181,11 @@ const Contact = () => {
               },
             }}
           />
+          <button
+            className="bg-cyan-800 sm:px-8 px-4 py-2 sm:py-4 text-lg sm:text-2xl rounded-2xl"
+          >
+            Submit
+          </button>
         </div>
         <div className="flex justify-center items-center max-w-2xl w-4/5 mt-4">
           <div className="w-full h-80 rounded-xl overflow-hidden relative">

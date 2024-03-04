@@ -6,7 +6,7 @@ const Accomodation = () => {
 					<h1 className='font-anta font-bold'>ACCOMODATION</h1>
 				</div>
 
-				<div className='flex flex-col justify-center md:p-10 mb-20 bk w-3/5 m-auto p-8'>
+				<div className='flex flex-col justify-center md:p-10 mb-20 bk w-3/5 m-auto p-8 text-white'>
 					<h1 className='font-anta md:text-2xl text-lg '>
 						Any troubles on where to stay? We have you covered. We have
 						accommodation options to ensure a comfortable and hassle-free
@@ -19,9 +19,9 @@ const Accomodation = () => {
 						WITHOUT FOOD - ₹250
 					</h2>
 				</div>
-				<div className='sm:mt-20 mt-10 flex flex-wrap sm:w-full  justify-evenly sm:justify-center sm:gap-8 gap-6'>
-					<p className='sm:px-8 px-4 py-2 sm:py-4 text-lg  sm:text-2xl bg-green-600 rounded-2xl'>
-						Coming soon...
+				<div className='sm:mt-20 mt-10 flex flex-wrap sm:w-full  justify-evenly sm:justify-center sm:gap-8 gap-6 text-white'>
+					<p className='sm:px-8 px-4 py-2 sm:py-4 text-lg  sm:text-2xl bg-cyan-800 rounded-2xl'>
+						Registrations open soon
 					</p>
 				</div>
 			</div>
