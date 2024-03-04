@@ -1,6 +1,6 @@
 import About from '../components/about/About';
 // import CelebrityCard from "../components/celebrityCard/CelebrityCard";
-import RevolveCarousel from '../components/revolveCarousel/revolveCarousel';
+import RevolveCarousel from '../components/revolveCarousel/RevolveCarousel';
 import Homeve from '../components/Homeve';
 import './Home.css';
 import { useState, useEffect } from 'react';
