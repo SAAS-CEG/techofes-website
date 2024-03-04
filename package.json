@@ -45,7 +45,8 @@
     "tsparticles": "^3.2.1",
     "tsparticles-engine": "^2.12.0",
     "tsparticles-slim": "^2.12.0",
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",

@@ -9,9 +9,10 @@ import Header from "./components/header/Header";
 import Merchandise from "./pages/Merchandise";
 import Footer from "./components/footer/Footer";
 import Accomodation from "./pages/Accomodation";
-import Login from "./pages/Login";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader/Loader";
+import Sign_in_new from "./pages/Sign_in_new";
+import Sign_in from "./pages/Sign_in";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -33,13 +34,14 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/sponsors" element={<Sponsors />} />
+            <Route path="/signup" element={<Sign_in />} />
+            <Route path="/signin" element={<Sign_in_new />} />
             {/* 
         <Route path="/workshops" element={<Workshops />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/merchandise" element={<Merchandise />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/accomodation" element={<Accomodation />} />
-            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </>
