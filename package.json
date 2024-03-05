@@ -19,6 +19,7 @@
     "@tsparticles/engine": "^3.2.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.2.1",
+    "@vercel/analytics": "^1.2.2",
     "all": "^0.0.0",
     "aos": "^2.3.4",
     "axios": "^1.6.7",
