@@ -15,14 +15,12 @@ const Merchandise = () => {
         <ThreeDCardDemo img={ajith} />
         <div className="sm:mt-20 mt-10 flex flex-wrap sm:w-full  justify-evenly sm:justify-center sm:gap-8 gap-6">
           <button
-            className="bg-gray-800 sm:px-8 px-4 py-2 sm:py-4 text-lg sm:text-2xl rounded-2xl cursor-not-allowed text-slate-500 hidden"
-            disabled
+            className="bg-gray-900 sm:px-8 px-4 py-2 sm:py-4 text-lg sm:text-2xl rounded-2xl"
           >
-            Buy now
+            <a href="https://forms.gle/YtL7xfP63KorEA478" target="_blank" style={{textDecoration: "none"}}>
+              Buy now
+            </a>
           </button>
-          <p className="sm:px-8 px-4 py-2 sm:py-4 text-lg  sm:text-2xl bg-cyan-800 rounded-2xl">
-            Sale opens soon...
-          </p>
         </div>
       </div>
     </div>
