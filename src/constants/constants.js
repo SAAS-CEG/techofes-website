@@ -22,6 +22,7 @@ const pages = [
 	{ id: '5', name: 'Merchandise', link: '/merchandise' },
 	{ id: '6', name: 'Sponsor', link: '/sponsors' },
 	{ id: '7', name: 'Contact', link: '/contact' },
+	{ id: '8', name: 'SignIn', link: '/signin' },
 ];
 
 export { eventRegistrationDetails, pages };
