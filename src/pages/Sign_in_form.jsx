@@ -1,8 +1,10 @@
 // import { Button } from "@/components/ui/button";
 // import { TextField, Button } from "@mui/material";
-import { object, string } from "zod";
-import { useState } from "react";
+// import { boolean, number, object, string } from "zod";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+const { VITE_APP_BASE_URL } = import.meta.env;
+import { useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 // import FormControl from "@mui/material/FormControl";
 // import { toast } from "sonner";
@@ -14,63 +16,141 @@ import { Link } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import OAuth from "@/pages/OAuth";
 const Sign_in_form = () => {
-  const [student, setStudent] = useState(false);
-  const schema = object({
-    Name: string()
-      .min(5, {
-        message: "Name must be at least 5 characters",
-      })
-      .max(50, {
-        message: "Name must be at most 50 characters",
-      }),
-    regno: string({
-      message: "Enter the number",
-    }).min(10, {
-      message: "Invalid Register Number",
-    }),
-    email: string().email({
-      message: "Invalid email",
-    }),
-    password: string().min(8, {
-      message: "Password must be at least 8 characters",
-    }),
-    confirmPassword: string().min(8, {
-      message: "Password must be at least 8 characters",
-    }),
-  });
+  let error = false;
+  const [student, setStudent] = useState(true);
+  const [errors, setErrors] = useState(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    async function fetchData() {
+      console.log(errors);
+      if (errors === null) {
+        try {
+          console.log("Form data:", formData);
+          const res = await postData(
+            `${VITE_APP_BASE_URL}/api/signup`,
+            formData
+          );
+          if (error) {
+            console.log(res);
+            setErrors((errors) => {
+              if (errors === null) {
+                return [res.message];
+              }
+              return [...errors, res.message];
+            });
+          } else {
+            console.log(res);
+            navigate("/signin");
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    }
+    fetchData();
+  }, [errors]);
+
+  async function postData(url = "", data = {}) {
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify(data),
+    });
+
+    // console.log(response);
+    if (response.status === 400) {
+      error = true;
+    }
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+
   const [formData, setFormData] = useState({
-    Name: "",
-    regno: "",
+    name: "",
+    rollno: 0,
     email: "",
-    mobileno: null,
+    phNo: 0,
     password: "",
     confirmPassword: "",
+    isCegian: student,
+    pincode: 0,
+    year: 0,
+    college: "",
+    dept: "",
   });
+
+  function resetData() {
+    setFormData({
+      name: "",
+      rollno: 0,
+      email: "",
+      phNo: 0,
+      password: "",
+      confirmPassword: "",
+      isCegian: student,
+      pincode: 0,
+      year: 0,
+      college: "",
+      dept: "",
+    });
+  }
+
+  const validateEmail = (email) => {
+    return email.match(
+      "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/"
+    );
+  };
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+    if (
+      name === "year" ||
+      name === "phNo" ||
+      name === "pincode" ||
+      name === "rollno"
+    ) {
+      value = Number(value);
+    }
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-    // Clear errors for the changed <f></f>ield
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: undefined,
-    }));
   };
-  const [errors, setErrors] = useState({});
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
+    setErrors(() => {
+      return null;
+    });
     e.preventDefault();
-    console.log(e);
-    try {
-      schema.parse(formData);
-      console.log("Form data:", formData);
-    } catch (error) {
-      let obj = {};
-      for (let i = 0; i < error.issues.length; i++) {
-        obj[error.issues[i].path[0]] = error.issues[i].message;
-      }
-      setErrors(obj);
+    if (formData.password !== formData.confirmPassword) {
+      setErrors((errors) => {
+        if (errors === null) {
+          return ["Passwords doesn't match. Please check it."];
+        }
+        return [...errors, "Passwords doesn't match. Please check it."];
+      });
+    }
+    if (formData.password.length < 8) {
+      setErrors((errors) => {
+        if (errors === null) {
+          return ["Password must be at least 8 characters long !"];
+        }
+        return [...errors, "Password must be at least 8 characters long !"];
+      });
+    }
+    if (validateEmail(formData.email)) {
+      setErrors((errors) => {
+        if (errors === null) {
+          return ["Please enter valid email"];
+        }
+        return [...errors, "Please enter valid email"];
+      });
     }
   };
   return (
@@ -109,7 +189,10 @@ const Sign_in_form = () => {
               className={`flex-1 text-center p-3 font-anta text-white font-bold italic  rounded-3xl cursor-pointer ${
                 student ? "bg-purple-600" : "bg-transparent"
               }`}
-              onClick={() => setStudent(true)}
+              onClick={() => {
+                setStudent(true);
+                resetData();
+              }}
             >
               CEGINAN
             </div>
@@ -117,7 +200,10 @@ const Sign_in_form = () => {
               className={`flex-1 text-center p-3 font-semibold text-white font-anta  rounded-3xl cursor-pointer ${
                 !student ? "bg-purple-600" : "bg-transparent"
               }`}
-              onClick={() => setStudent(false)}
+              onClick={() => {
+                setStudent(false);
+                resetData();
+              }}
             >
               Others
             </div>
@@ -126,53 +212,109 @@ const Sign_in_form = () => {
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <input
             label="Name"
-            name="Name"
-            value={formData.Name}
+            name="name"
+            type="text"
+            value={formData.name}
             placeholder="Name"
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            required
           />
           <input
             label="Register Number"
-            name="regno"
+            name="rollno"
+            type="number"
             placeholder="Register Number"
-            value={formData.regno}
+            value={formData.rollno === 0 ? "" : formData.rollno}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
           />
+          {student && (
+            <input
+              label="Department"
+              name="dept"
+              type="text"
+              value={formData.dept}
+              placeholder="Department"
+              onChange={handleChange}
+              className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+              required
+            />
+          )}
+          {!student && (
+            <input
+              label="College"
+              name="college"
+              type="text"
+              value={formData.college}
+              placeholder="College"
+              onChange={handleChange}
+              className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+              required
+            />
+          )}
+          <input
+            label="year"
+            name="year"
+            type="number"
+            placeholder="Year"
+            value={formData.year === 0 ? "" : formData.year}
+            onChange={handleChange}
+            className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            required
+          />
+          {!student && (
+            <input
+              label="Pin code"
+              name="pincode"
+              type="number"
+              placeholder="Pin code"
+              value={formData.pincode === 0 ? "" : formData.pincode}
+              onChange={handleChange}
+              className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+              required
+            />
+          )}
 
           <input
             label="Email"
             name="email"
+            type="email"
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            required
           />
           <input
             type="tel"
             maxLength={10}
             placeholder="Mobile Number"
-            value={formData.mobileno}
-            name="mobileno"
+            value={formData.phNo === 0 ? "" : formData.phNo}
+            name="phNo"
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            required
           />
           <input
             label="Password"
             name="password"
+            type="password"
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            required
           />
           <input
             label="Confirm Password"
             name="confirmPassword"
+            type="password"
             placeholder="Confirm Password"
             value={formData.confirmPassword}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            required
           />
 
           <button
@@ -184,6 +326,13 @@ const Sign_in_form = () => {
           >
             Submit
           </button>
+          {errors !== null && (
+            <div className="bg-red-500 text-white rounded-3xl w-full text-xl sm:text-md text-center my-8 p-4 h-full">
+              {errors.map((error, i) => (
+                <p key={i}>{error}</p>
+              ))}
+            </div>
+          )}
         </form>
         <div className="text-center mt-4">
           <p className="font-semibold text-white">

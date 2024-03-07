@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 // import Workshops from "./pages/Workshops";
 import Sponsors from "./pages/Sponsors";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
-import Registration from "./pages/Registration";
+// import Registration from "./pages/Registration";
 import Header from "./components/header/Header";
 import Merchandise from "./pages/Merchandise";
 import Footer from "./components/footer/Footer";
@@ -15,7 +15,7 @@ import Sign_in_new from "./pages/Sign_in_new";
 import Sign_in from "./pages/Sign_in";
 
 const App = () => {
-	const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -36,11 +36,11 @@ const App = () => {
             <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/signup" element={<Sign_in />} />
             <Route path="/signin" element={<Sign_in_new />} />
-            {/* 
+            {/*  
         <Route path="/workshops" element={<Workshops />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/merchandise" element={<Merchandise />} />
-            <Route path="/register" element={<Registration />} />
+            {/* <Route path="/register" element={<Registration />} /> */}
             <Route path="/accomodation" element={<Accomodation />} />
           </Routes>
           <Footer />
