@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 const { VITE_APP_BASE_URL } = import.meta.env;
-import { LoginContext } from "../Context/logincontext";
+
 let error = false;
+
 
 
 async function postData(url = "", data = {}) {
@@ -34,8 +35,9 @@ const Sign_in_new = () => {
   async function fetchData() {
     try {
       const res = await postData(`${VITE_APP_BASE_URL}/api/login`,formData);
+      console.log(res.token)
         if(res.token){
-         setLoggedIn(true);
+         console.log(res.token);
          navigate('/');
          console.log(res.user.name)
          setUser(res.user.name);
