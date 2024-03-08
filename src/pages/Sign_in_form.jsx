@@ -20,35 +20,32 @@ const Sign_in_form = () => {
   const [student, setStudent] = useState(true);
   const [errors, setErrors] = useState(null);
   const navigate = useNavigate();
-  useEffect(() => {
-    async function fetchData() {
-      console.log(errors);
-      if (errors === null) {
-        try {
-          console.log("Form data:", formData);
-          const res = await postData(
-            `${VITE_APP_BASE_URL}/api/signup`,
-            formData
-          );
-          if (error) {
-            console.log(res);
-            setErrors((errors) => {
-              if (errors === null) {
-                return [res.message];
-              }
-              return [...errors, res.message];
-            });
-          } else {
-            console.log(res);
-            navigate("/signin");
-          }
-        } catch (error) {
-          console.log(error);
+  async function signup(formData) {
+    console.log(errors);
+    if (errors === null) {
+      try {
+        console.log("Form data:", formData);
+        const res = await postData(
+          `${VITE_APP_BASE_URL}/api/signup`,
+          formData
+        );
+        if (error) {
+          console.log(res);
+          setErrors((errors) => {
+            if (errors === null) {
+              return [res.message];
+            }
+            return [...errors, res.message];
+          });
+        } else {
+          console.log(res);
+          navigate("/signin");
         }
+      } catch (error) {
+        console.log(error);
       }
     }
-    fetchData();
-  }, [errors]);
+  }
 
   async function postData(url = "", data = {}) {
     const response = await fetch(url, {
@@ -73,7 +70,7 @@ const Sign_in_form = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    rollno: 0,
+    rollno: "",
     email: "",
     phNo: 0,
     password: "",
@@ -152,6 +149,7 @@ const Sign_in_form = () => {
         return [...errors, "Please enter valid email"];
       });
     }
+    signup(formData);
   };
   return (
     <>
@@ -225,7 +223,7 @@ const Sign_in_form = () => {
             name="rollno"
             type="number"
             placeholder="Register Number"
-            value={formData.rollno === 0 ? "" : formData.rollno}
+            value={formData.rollno}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
           />
