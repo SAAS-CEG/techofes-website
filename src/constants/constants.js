@@ -25,4 +25,14 @@ const pages = [
 	{ id: '8', name: 'SignIn', link: '/signin' },
 ];
 
-export { eventRegistrationDetails, pages };
+const loggedin = [
+	{ id: '1', name: 'Home', link: '/#home' },
+	{ id: '3', name: 'Events', link: '/events' },
+	{ id: '4', name: 'Accomodation', link: '/accomodation' },
+	{ id: '5', name: 'Merchandise', link: '/merchandise' },
+	{ id: '6', name: 'Sponsor', link: '/sponsors' },
+	{ id: '7', name: 'Contact', link: '/contact' },
+	{ id: '8', name: 'Logout', link: '/logout' },
+]
+
+export { eventRegistrationDetails, pages, loggedin };

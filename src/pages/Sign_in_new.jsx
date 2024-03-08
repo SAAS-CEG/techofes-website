@@ -2,31 +2,13 @@ import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 const { VITE_APP_BASE_URL } = import.meta.env;
 import Cookies from "universal-cookie";
+import { useAuth } from "../components/AuthContext"
 import { jwtDecode } from "jwt-decode";
 let error = false;
 let cookies = new Cookies();
 
-
-async function postData(url = "", data = {}) {
-  const response = await fetch(url, {
-    method: "POST",
-    mode: "cors",
-    cache: "no-cache",
-    credentials: "same-origin",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    redirect: "follow",
-    referrerPolicy: "no-referrer",
-    body: JSON.stringify(data),
-  });
-   if (response.status === 400) {
-      error = true;
-  }
-  return response.json(); // parses JSON response into native JavaScript objects
-}
-
 const Sign_in_new = () => {
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -34,8 +16,7 @@ const Sign_in_new = () => {
   const navigate = useNavigate();
   async function fetchData() {
     try {
-      const res = await postData(`${VITE_APP_BASE_URL}/api/login`, formData);
-      console.log(res.token)  
+      const res = await login(formData);
       if (res.token) {
         const decoded = jwtDecode(res.token)
         cookies.set("jwt_auth", decoded, {
@@ -45,12 +26,11 @@ const Sign_in_new = () => {
          setFormData({email: "",password: "",});
         }
         else{
-          console.log("hello");
           setErrorMsg(['Wrong password/Email!'])
         }
     } 
     catch (error) {
-      console.log(error)
+      setErrorMsg([error.errorMsg])
       setFormData({email: "",password: "",});
     }
 }
@@ -66,7 +46,6 @@ const Sign_in_new = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form data:", formData);
     const res = await fetchData();
   };
   const [errorMsg,setErrorMsg]= useState([]);
