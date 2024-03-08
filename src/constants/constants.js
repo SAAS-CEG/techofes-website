@@ -1,3 +1,4 @@
+
 const eventRegistrationDetails = [
 	{
 		id: '1',
@@ -14,15 +15,4 @@ const eventRegistrationDetails = [
 			'Utopia, a 2-day student-organized event on November 29th-30th which brought a whirlwind of fun and competition to the campus. Students from all corners of the campus participated in exciting contests, showcasing their talents and battling it out for the top prize. The event culminated with a thrilling concert, leaving everyone energized and entertained',
 	},
 ];
-
-const pages = [
-	{ id: '1', name: 'Home', link: '/#home' },
-	{ id: '3', name: 'Events', link: '/events' },
-	{ id: '4', name: 'Accomodation', link: '/accomodation' },
-	{ id: '5', name: 'Merchandise', link: '/merchandise' },
-	{ id: '6', name: 'Sponsor', link: '/sponsors' },
-	{ id: '7', name: 'Contact', link: '/contact' },
-	{ id: '8', name: 'SignIn', link: '/signin' },
-];
-
-export { eventRegistrationDetails, pages };
+ export { eventRegistrationDetails };

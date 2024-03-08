@@ -19,6 +19,7 @@ const Sign_in_form = () => {
   let error = false;
   const [student, setStudent] = useState(true);
   const [errors, setErrors] = useState(null);
+  const[isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     async function fetchData() {
@@ -26,6 +27,7 @@ const Sign_in_form = () => {
       if (errors === null) {
         try {
           console.log("Form data:", formData);
+          setIsLoading(true);
           const res = await postData(
             `${VITE_APP_BASE_URL}/api/signup`,
             formData
@@ -33,10 +35,11 @@ const Sign_in_form = () => {
           if (error) {
             console.log(res);
             setErrors((errors) => {
-              if (errors === null) {
+              if (errors === null ) {
                 return [res.message];
               }
-              return [...errors, res.message];
+              // if(res.message)
+              return [...errors, res?.message];
             });
           } else {
             console.log(res);
@@ -44,10 +47,13 @@ const Sign_in_form = () => {
           }
         } catch (error) {
           console.log(error);
+        }finally{
+        setIsLoading(false);
         }
       }
     }
     fetchData();
+
   }, [errors]);
 
   async function postData(url = "", data = {}) {
@@ -64,7 +70,7 @@ const Sign_in_form = () => {
       body: JSON.stringify(data),
     });
 
-    // console.log(response);
+    console.log(response);
     if (response.status === 400) {
       error = true;
     }
@@ -218,6 +224,7 @@ const Sign_in_form = () => {
             placeholder="Name"
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            disabled={isLoading}
             required
           />
           <input
@@ -228,6 +235,8 @@ const Sign_in_form = () => {
             value={formData.rollno === 0 ? "" : formData.rollno}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            disabled={isLoading}
+            required
           />
           {student && (
             <input
@@ -239,6 +248,7 @@ const Sign_in_form = () => {
               onChange={handleChange}
               className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
               required
+              disabled={isLoading}
             />
           )}
           {!student && (
@@ -251,6 +261,7 @@ const Sign_in_form = () => {
               onChange={handleChange}
               className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
               required
+              disabled={isLoading}
             />
           )}
           <input
@@ -261,6 +272,7 @@ const Sign_in_form = () => {
             value={formData.year === 0 ? "" : formData.year}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
+            disabled={isLoading}
             required
           />
           {!student && (
@@ -273,6 +285,7 @@ const Sign_in_form = () => {
               onChange={handleChange}
               className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
               required
+              disabled={isLoading}
             />
           )}
 
@@ -285,6 +298,7 @@ const Sign_in_form = () => {
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
             required
+            disabled={isLoading}
           />
           <input
             type="tel"
@@ -295,6 +309,7 @@ const Sign_in_form = () => {
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
             required
+            disabled={isLoading}
           />
           <input
             label="Password"
@@ -305,6 +320,7 @@ const Sign_in_form = () => {
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
             required
+            disabled={isLoading}
           />
           <input
             label="Confirm Password"
@@ -315,18 +331,20 @@ const Sign_in_form = () => {
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
             required
+            disabled={isLoading}
           />
 
           <button
-            className="bg-transparent
+            className={`bg-transparent
           w-full
           rounded-full
-          hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-3 px-4 border border-purple-500 hover:border-transparent transition duration-500 outline-none"
+          hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-3 px-4 border border-purple-500 hover:border-transparent transition duration-500 outline-none ${isLoading? "bg-green-400 hover:bg-green-600 text-white": ""}`}
             type="submit"
+            disabled={isLoading}
           >
-            Submit
+            {isLoading ? "Loading" : "Submit"}
           </button>
-          {errors !== null && (
+          {errors !== null && errors[0] && (
             <div className="bg-red-500 text-white rounded-3xl w-full text-xl sm:text-md text-center my-8 p-4 h-full">
               {errors.map((error, i) => (
                 <p key={i}>{error}</p>

@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 const { VITE_APP_BASE_URL } = import.meta.env;
-
+import { LoginContext } from "../Context/logincontext";
 let error = false;
-
 
 
 async function postData(url = "", data = {}) {
@@ -26,28 +25,32 @@ async function postData(url = "", data = {}) {
 }
 
 const Sign_in_new = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState({email: "",password: "",});
+  const [errorMsg,setErrorMsg]= useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+ const {isLoggedIn,setLoggedIn,User,setUser,pages}=useContext(LoginContext);
+
   const navigate = useNavigate();
   async function fetchData() {
     try {
       const res = await postData(`${VITE_APP_BASE_URL}/api/login`,formData);
-      console.log(res.token)
         if(res.token){
-         console.log(res.token);
+         setLoggedIn(true);
          navigate('/');
+         console.log(res.user.name)
+         setUser(res.user.name);
          setFormData({email: "",password: "",});
         }
-        else{
-          console.log("hello");
-          setErrorMsg(['Wrong password/Email!'])
+        else if(res.message){
+          setErrorMsg((errors) => [...errors,res.message]) //if there is wrong pass/EMail
         }
     } 
     catch (error) {
       console.log(error)
       setFormData({email: "",password: "",});
+    }
+    finally{
+      setIsLoading(false);
     }
 }
  
@@ -62,10 +65,10 @@ const Sign_in_new = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMsg([]);
     console.log("Form data:", formData);
     const res = await fetchData();
   };
-  const [errorMsg,setErrorMsg]= useState([]);
 
   return (
     
@@ -98,7 +101,10 @@ const Sign_in_new = () => {
             name="email"
             className="w-full p-3 rounded-full text-xl text-black outline-none border-none px-5 shadow-xl"
             placeholder="Enter your Email"
+            type="email"
             value={formData.email}
+            required
+            disabled={isLoading}
             onChange={handleChange}
           />
           <input
@@ -107,22 +113,27 @@ const Sign_in_new = () => {
             placeholder="Enter your Password"
             className="w-full p-3 rounded-full text-xl text-black outline-none border-none px-5 shadow-xl"
             value={formData.password}
+            disabled={isLoading}
             onChange={handleChange}
           />
           
           <button
-            className="bg-transparent
+            className={`
           w-full
           rounded-full
-          hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-3 px-4 border border-purple-500 hover:border-transparent transition duration-500"
+           font-semibold hover:text-white py-3 px-4 border hover:border-transparent transition duration-500 outline-none ${isLoading? "bg-green-400 hover:bg-green-600 text-white": "bg-transparent border-purple-500 hover:bg-purple-500 text-purple-700"}`}
+            type="submit"
+            disabled={isLoading}
           >
-            Sign In
+            {isLoading ? "Loading" : "Login"}
           </button>
-          <div id="wrong-password" className="bg-red-500 text-white rounded-3xl w-full text-xl sm:text-md text-center my-8 p-4 h-full">
-          {errorMsg.map((error, i) => (
+          {errorMsg !== null && errorMsg[0] && (
+            <div className="bg-red-500 text-white rounded-3xl w-full text-xl sm:text-md text-center my-8 p-4 h-full">
+              {errorMsg.map((error, i) => (
                 <p key={i}>{error}</p>
               ))}
-          </div>
+            </div>
+          )}
         </form>
         <div className="text-center mt-7">
           <p className="text-white font-semibold text-[18px]">

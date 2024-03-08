@@ -1,5 +1,5 @@
 import FlipCard from "../components/FlipCard";
-import { eventRegistrationDetails } from "../constants/constants";
+import { eventRegistrationDetails } from "../constants/Constants";
 
 const Events = () => {
   return (

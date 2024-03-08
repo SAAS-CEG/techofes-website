@@ -1,4 +1,4 @@
-import { eventRegistrationDetails } from '../constants/constants';
+import { eventRegistrationDetails } from '../constants/Constants';
 import { Link } from 'react-router-dom';
 import FlipCard from './FlipCard';
 
