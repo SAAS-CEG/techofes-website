@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 const { VITE_APP_BASE_URL } = import.meta.env;
-
+import Cookies from "universal-cookie";
+import { jwtDecode } from "jwt-decode";
 let error = false;
-
+let cookies = new Cookies();
 
 
 async function postData(url = "", data = {}) {
@@ -33,10 +34,13 @@ const Sign_in_new = () => {
   const navigate = useNavigate();
   async function fetchData() {
     try {
-      const res = await postData(`${VITE_APP_BASE_URL}/api/login`,formData);
-      console.log(res.token)
-        if(res.token){
-         console.log(res.token);
+      const res = await postData(`${VITE_APP_BASE_URL}/api/login`, formData);
+      console.log(res.token)  
+      if (res.token) {
+        const decoded = jwtDecode(res.token)
+        cookies.set("jwt_auth", decoded, {
+          expires: new Date(decoded.exp * 1000)
+        })
          navigate('/');
          setFormData({email: "",password: "",});
         }
