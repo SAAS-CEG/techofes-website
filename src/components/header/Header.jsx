@@ -8,7 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import { pages } from '../../constants/constants';
+import { useAuth } from '../AuthContext';
+import { pages, loggedin } from '../../constants/constants';
 import { Link } from 'react-router-dom';
 import HeaderButton from './header-button';
 import { useEffect } from 'react';
@@ -17,6 +18,7 @@ import './Header.css';
 
 function Header() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
+	const { isAuthenticated } = useAuth();
 
 	useEffect(() => {
 		// Set isVisible to true after a short delay to allow the component to render
@@ -80,19 +82,36 @@ function Header() {
 									display: { xs: 'block', md: 'none' },
 								}}
 							>
-								{pages.map((page) => (
-									<MenuItem
-										key={page.id}
-										onClick={handleCloseNavMenu}
-									>
-										<Typography
-											textAlign='center'
-											textTransform='capitalize'
+								{
+									isAuthenticated ?
+									loggedin.map((page) => (
+										<MenuItem
+											key={page.id}
+											onClick={handleCloseNavMenu}
 										>
-											<Link to={page.link}>{page.name}</Link>
-										</Typography>
-									</MenuItem>
-								))}
+											<Typography
+												textAlign='center'
+												textTransform='capitalize'
+											>
+												<Link to={page.link}>{page.name}</Link>
+											</Typography>
+										</MenuItem>
+									))
+									:
+									pages.map((page) => (
+										<MenuItem
+											key={page.id}
+											onClick={handleCloseNavMenu}
+										>
+											<Typography
+												textAlign='center'
+												textTransform='capitalize'
+											>
+												<Link to={page.link}>{page.name}</Link>
+											</Typography>
+										</MenuItem>
+									))
+								}
 							</Menu>
 						</Box>
 
@@ -130,15 +149,28 @@ function Header() {
 							}}
 						>
 							{/* Links without the logo */}
-							{pages.map((page) => (
-								<HeaderButton
-									key={page.id}
-									onClick={handleCloseNavMenu}
-									page={page}
-								>
-									<Link to={page.link}>{page.name}</Link>
-								</HeaderButton>
-							))}
+							{
+								isAuthenticated ?
+								loggedin.map((page) => (
+									<HeaderButton
+										key={page.id}
+										onClick={handleCloseNavMenu}
+										page={page}
+									>
+										<Link to={page.link}>{page.name}</Link>
+									</HeaderButton>
+								))
+								:
+								pages.map((page) => (
+									<HeaderButton
+										key={page.id}
+										onClick={handleCloseNavMenu}
+										page={page}
+									>
+										<Link to={page.link}>{page.name}</Link>
+									</HeaderButton>
+								))
+							}
 						</Box>
 					</Toolbar>
 				</Container>

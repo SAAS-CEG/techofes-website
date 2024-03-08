@@ -1,20 +1,40 @@
 import { useState } from "react";
-// import { TextField, Button, InputAdornment } from "@mui/material";
-import { Link } from "react-router-dom";
-import { object, string } from "zod";
+import { Link,useNavigate } from "react-router-dom";
+const { VITE_APP_BASE_URL } = import.meta.env;
+import Cookies from "universal-cookie";
+import { useAuth } from "../components/AuthContext"
+import { jwtDecode } from "jwt-decode";
+let error = false;
+let cookies = new Cookies();
 
 const Sign_in_new = () => {
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
-  const schema = object({
-    email: string().email("Invalid email format").min(5),
-    password: string().min(8, "Password must be at least 8 characters"),
-  });
-
-  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
+  async function fetchData() {
+    try {
+      const res = await login(formData);
+      if (res.token) {
+        const decoded = jwtDecode(res.token)
+        cookies.set("jwt_auth", decoded, {
+          expires: new Date(decoded.exp * 1000)
+        })
+         navigate('/');
+         setFormData({email: "",password: "",});
+        }
+        else{
+          setErrorMsg(['Wrong password/Email!'])
+        }
+    } 
+    catch (error) {
+      setErrorMsg([error.errorMsg])
+      setFormData({email: "",password: "",});
+    }
+}
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,28 +42,16 @@ const Sign_in_new = () => {
       ...prevData,
       [name]: value,
     }));
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: undefined,
-    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      schema.parse(formData);
-      console.log("Form data:", formData);
-      // Add your sign-in logic here
-    } catch (error) {
-      let obj = {};
-      error.errors.forEach((err) => {
-        obj[err.path[0]] = err.message;
-      });
-      setErrors(obj);
-    }
+    const res = await fetchData();
   };
+  const [errorMsg,setErrorMsg]= useState([]);
 
   return (
+    
     <div className="flex justify-center align-items-center my-[100px] p-5 font-anta">
       <div className="md:w-1/3  h-full mt-4 bg-white rounded-md p-6 demo">
         <div className="flex items-center justify-center flex-col gap-2">
@@ -67,7 +75,7 @@ const Sign_in_new = () => {
             Sign In
           </h1>
         </div>
-
+        
         <form onSubmit={handleSubmit} className="space-y-6">
           <input
             name="email"
@@ -75,18 +83,16 @@ const Sign_in_new = () => {
             placeholder="Enter your Email"
             value={formData.email}
             onChange={handleChange}
-            error={Boolean(errors.email)}
-            helperText={errors.email}
           />
           <input
+            name="password"
             type="password"
             placeholder="Enter your Password"
             className="w-full p-3 rounded-full text-xl text-black outline-none border-none px-5 shadow-xl"
             value={formData.password}
             onChange={handleChange}
-            error={Boolean(errors.password)}
-            helperText={errors.password}
           />
+          
           <button
             className="bg-transparent
           w-full
@@ -95,6 +101,11 @@ const Sign_in_new = () => {
           >
             Sign In
           </button>
+          <div id="wrong-password" className="bg-red-500 text-white rounded-3xl w-full text-xl sm:text-md text-center my-8 p-4 h-full">
+          {errorMsg.map((error, i) => (
+                <p key={i}>{error}</p>
+              ))}
+          </div>
         </form>
         <div className="text-center mt-7">
           <p className="text-white font-semibold text-[18px]">
