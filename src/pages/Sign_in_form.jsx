@@ -192,7 +192,7 @@ const Sign_in_form = () => {
                 resetData();
               }}
             >
-              CEGINAN
+              CEGIAN
             </div>
             <div
               className={`flex-1 text-center p-3 font-semibold text-white font-anta  rounded-3xl cursor-pointer ${
