@@ -15,6 +15,7 @@ import Loader from "./components/Loader/Loader";
 import Sign_in_new from "./pages/Sign_in_new";
 import Sign_in from "./pages/Sign_in";
 import Logout from "./components/Logout";
+import ExternalRedirectComponent from "./pages/ExternalRedirection";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/merchandise" element={<Merchandise />} />
             {/* <Route path="/register" element={<Registration />} /> */}
             <Route path="/accomodation" element={<Accomodation />} />
+            <Route path="/microcontest" element={<ExternalRedirectComponent/>} />
             <Route path="/logout" element={<Logout />} />
           </Routes>
           <Footer />
