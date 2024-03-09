@@ -70,7 +70,7 @@ const Sign_in_form = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    rollno: "",
+    rollno: 0,
     email: "",
     phNo: 0,
     password: "",
@@ -223,7 +223,7 @@ const Sign_in_form = () => {
             name="rollno"
             type="number"
             placeholder="Register Number"
-            value={formData.rollno}
+            value={formData.rollno === 0 ? "" : formData.rollno}
             onChange={handleChange}
             className="py-3 px-4 text-[18px] rounded-full shadow-md outline-none"
           />
