@@ -157,11 +157,21 @@ const Home = () => {
 				</div>
 			</div>
 			<div className='h-full md:h-full text-white flex flex-col justify-center item-center  '>
-				<div className='text-center h-24 text-orange-400 text-6xl font-bold mt-20 '>
-					70+ INTERESTING EVENTS
-				</div>
+				<h1
+					className="block sm:hidden text-3xl md:text-6xl text-center mt-2  z-10 mb-10 font-anta font-bold"
+				>
+					Our Pro-Shows
+				</h1>
 				<RevolveCarousel />
 				<ProEventCard />
+				
+				<button type="button" class='flex w-30 bg-gradient-to-r from-orange-400 to-violet-400 hover:from-orange-600 hover:to-violet-600 focus:outline-none text-white text-2xl uppercase font-bold shadow-md rounded-full mx-auto p-4'>
+                    <div class=" justify-center align-bottom text-center">
+						<a href='https://forms.gle/vSnw75gpgAhAH75Q7' target='_blank' alt='form-link'>
+							Book a Ticket
+						</a>
+					</div>  
+                </button>
 			</div>
 
 			<div className=' h-full bg-fixed bg-no-repeat bg-cover mb-[70px]'>
