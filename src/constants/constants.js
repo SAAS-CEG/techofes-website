@@ -18,7 +18,7 @@ const eventRegistrationDetails = [
 const pages = [
 	{ id: '1', name: 'Home', link: '/#home' },
 	{ id: '3', name: 'Events', link: '/events' },
-	{ id: '4', name: 'Accomodation', link: '/accomodation' },
+	{ id: '4', name: 'Accommodation', link: '/accomodation' },
 	{ id: '5', name: 'Merchandise', link: '/merchandise' },
 	{ id: '6', name: 'Sponsor', link: '/sponsors' },
 	{ id: '7', name: 'Contact', link: '/contact' },
@@ -28,7 +28,7 @@ const pages = [
 const loggedin = [
 	{ id: '1', name: 'Home', link: '/#home' },
 	{ id: '3', name: 'Events', link: '/events' },
-	{ id: '4', name: 'Accomodation', link: '/accomodation' },
+	{ id: '4', name: 'Accommodation', link: '/accomodation' },
 	{ id: '5', name: 'Merchandise', link: '/merchandise' },
 	{ id: '6', name: 'Sponsor', link: '/sponsors' },
 	{ id: '7', name: 'Contact', link: '/contact' },
