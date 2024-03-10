@@ -3,7 +3,7 @@ const Accomodation = () => {
 		<div>
 			<div className='h-full lg:min-h-[60vh] min-h-[85vh] pb-11 mt-20 cursor-default bg-g'>
 				<div className='flex items-center justify-center p-11 text-3xl md:text-5xl text-white font-anta'>
-					<h1 className='font-anta font-bold'>ACCOMODATION</h1>
+					<h1 className='font-anta font-bold'>ACCOMMODATION</h1>
 				</div>
 
 				<div className='flex flex-col justify-center md:p-10 mb-20 bk w-3/5 m-auto p-8 text-white'>
