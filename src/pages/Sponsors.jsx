@@ -25,7 +25,7 @@ const Sponsors = () => {
 
 			<div className='flex text-white flex-col md:flex-row bk  justify-evenly w-[95%] py-16 mx-auto flex-wrap gap-x-20 gap-y-20'>
 				<div>
-					<a href='#'>
+					<a href='https://www.aramiasacademy.com'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={aram_logo}
@@ -37,7 +37,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.zomato.com/'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={zomato}
@@ -49,7 +49,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://web.shortfundly.com/'>
 						<img
 							className='h-60 w-60 hover:scale-110 transition-all mx-auto object-contain'
 							src={sflogo}
@@ -61,7 +61,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://zebronics.com'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={zebronics}
@@ -73,7 +73,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.google.com/maps/place/123+Ads+Print+-+Flex+%26+UV+print+in+chennai/@13.0591971,80.2722754,17z/data=!3m1!4b1!4m6!3m5!1s0x3a526621de8ea5d7:0xe472056516d81e64!8m2!3d13.0591971!4d80.2722754!16s%2Fg%2F11g81f__0y?entry=ttu'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={ads_123}
@@ -85,7 +85,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://rajams.in'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={rajams}
@@ -97,7 +97,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.toyotabharat.com'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={toyota}
@@ -109,7 +109,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.instagram.com/flantz_media?igsh=YzljYTk1ODg3Zg=='>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={flantz}
@@ -121,7 +121,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://laurelstrophy.com'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={laurels}
@@ -133,7 +133,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://instax.com'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={fuji}
@@ -145,7 +145,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://ishwaryamgoodness.com'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain '
 							src={ishwaryam}
@@ -157,7 +157,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.vidiem.in'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={vidiem}
@@ -169,7 +169,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.satturmittaikadai.com/'>
 						<img
 							className='h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={mk}
@@ -181,7 +181,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.instagram.com/touriga_holidays/'>
 						<img
 							className=' h-60 w-60 hover:scale-110 transition-all mx-auto rounded-2xl object-contain'
 							src={touriga}
@@ -193,7 +193,7 @@ const Sponsors = () => {
 					</h3>
 				</div>
 				<div>
-					<a href='#'>
+					<a href='https://www.canvas.space'>
 						<img
 							className='h-60 w-60 hover:scale-110 transition-all mx-auto object-contain'
 							src={canvas}
