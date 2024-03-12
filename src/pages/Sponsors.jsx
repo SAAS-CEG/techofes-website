@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import canvas from '../assets/sponsers/canvas.png';
 import sflogo from '../assets/sponsers/sflogo.png';
 import mk from '../assets/sponsers/mk.jpg';

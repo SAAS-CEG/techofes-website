@@ -7,6 +7,7 @@ const Accomodation = () => {
 		  behavior: "smooth"
 		});
 	  }, []);
+	  
 	return (
 		<div>
 			<div className='h-full lg:min-h-[60vh] min-h-[85vh] pb-11 mt-20 cursor-default bg-cover bg-g bg-no-repeat'>
