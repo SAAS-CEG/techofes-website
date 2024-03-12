@@ -12,7 +12,7 @@ const Sponsors = () => {
 				<h1 className='text-3xl md:text-5xl font-anta'>OUR SPONSORS</h1>
 			</div>
 
-			<div className='flex flex-col md:flex-row bk  justify-evenly w-[95%] py-8 mx-auto flex-wrap'>
+			<div className='flex text-white flex-col md:flex-row bk  justify-evenly w-[95%] py-8 mx-auto flex-wrap'>
 				<div>
 					<a href='#'>
 						<img
