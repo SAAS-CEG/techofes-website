@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import ProEventCard from '../components/proEventCard/ProEventCard';
 import ConfettiComp from './Confetti';
 import Countdown from './timer';
-// check pull status
 
 const Home = () => {
 	const [video, setVideo] = useState(true);

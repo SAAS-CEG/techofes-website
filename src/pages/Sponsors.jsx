@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import canvas from "../assets/sponsers/canvas.png";
 import sflogo from "../assets/sponsers/sflogo.png";
 import mk from "../assets/sponsers/mk.jpg";
@@ -5,8 +6,14 @@ import touriga from "../assets/sponsers/touriga.png";
 import "./Merchandise.css";
 
 const Sponsors = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
   return (
-    <div className="mt-20 bg-g pb-20">
+    <div className="mt-20 bg-cover bg-g bg-no-repeat pb-20">
       <div className="flex items-center justify-center p-8 pt-10 pb-5  text-white font-anta">
         <h1 className="text-3xl md:text-5xl font-anta">OUR SPONSORS</h1>
       </div>

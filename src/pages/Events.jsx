@@ -96,7 +96,7 @@ const Events = () => {
   }, [])
 
   return (
-    <div className="w-full z-0 mt-20 overflow-hidden p-5 bg-g min-h-[100vh] h-full">
+    <div className="w-full z-0 mt-20 overflow-hidden p-5 bg-cover bg-g bg-no-repeat min-h-[100vh] h-full">
       <div className="flex items-center justify-center p-11 text-3xl md:text-5xl text-white font-anta">
         <h1 className="font-anta font-bold">EVENTS</h1>
       </div>

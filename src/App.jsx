@@ -16,6 +16,7 @@ import Sign_in_new from "./pages/Sign_in_new";
 import Sign_in from "./pages/Sign_in";
 import Logout from "./components/Logout";
 import ExternalRedirectComponent from "./pages/ExternalRedirection";
+import Profile from "./components/Profile";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,10 @@ const App = () => {
     setTimeout(() => {
       setLoading(false);
     }, 5000);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }, []);
   return (
     <BrowserRouter>
@@ -47,7 +52,7 @@ const App = () => {
             {/* <Route path="/register" element={<Registration />} /> */}
             <Route path="/accomodation" element={<Accomodation />} />
             <Route path="/microcontest" element={<ExternalRedirectComponent/>} />
-            <Route path="/logout" element={<Logout />} />
+            <Route path="/profile" element={<Profile/>} />
           </Routes>
           <Footer />
           </AuthProvider>

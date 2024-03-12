@@ -1,7 +1,15 @@
+import { useEffect } from "react";
+
 const Accomodation = () => {
+	useEffect(() => {
+		window.scrollTo({
+		  top: 0,
+		  behavior: "smooth"
+		});
+	  }, []);
 	return (
 		<div>
-			<div className='h-full lg:min-h-[60vh] min-h-[85vh] pb-11 mt-20 cursor-default bg-g'>
+			<div className='h-full lg:min-h-[60vh] min-h-[85vh] pb-11 mt-20 cursor-default bg-cover bg-g bg-no-repeat'>
 				<div className='flex items-center justify-center p-11 text-3xl md:text-5xl text-white font-anta'>
 					<h1 className='font-anta font-bold'>ACCOMMODATION</h1>
 				</div>
