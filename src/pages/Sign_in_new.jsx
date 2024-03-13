@@ -18,7 +18,7 @@ const Sign_in_new = () => {
     try {
       cookies.remove("user");
       const res = await login(formData);
-      if (res.token) {
+      if (res.user) {
         const decoded = jwtDecode(res.token)
         // cookies.set("jwt_auth", decoded, {
         //   expires: new Date(decoded.exp * 1000)

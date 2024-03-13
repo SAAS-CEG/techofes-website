@@ -35,7 +35,9 @@ export const AuthProvider = ({ children }) => {
         const res = await postData(`${VITE_APP_BASE_URL}/api/login`, formData);
         setIsAuthenticated(true);
         cookies.set("user", res.user, {
-          maxAge: 5 * 24 * 60 * 60 * 3600
+          maxAge: 5 * 24 * 60 * 60 * 3600,
+          sameSite: "none",
+          secure: true
         });
         return res;
     } catch (err) {
