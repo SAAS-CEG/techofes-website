@@ -5,9 +5,9 @@ const Registration = () => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
 
-  function onSubmit(data) {
-    console.log(data);
-  }
+  // function onSubmit(data) {
+  //   console.log(data);
+  // }
 
   const sxx = {
     input: {

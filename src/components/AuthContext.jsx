@@ -2,8 +2,10 @@
 import React, { createContext, useState, useContext } from 'react';
 const { VITE_APP_BASE_URL } = import.meta.env;
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 const AuthContext = createContext();
+let cookies = new Cookies();
 
 async function postData(url = "", data = {}) {
     const response = await fetch(url, {
@@ -30,10 +32,13 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (formData) => {
     try {
-        console.log(VITE_APP_BASE_URL)
         const res = await postData(`${VITE_APP_BASE_URL}/api/login`, formData);
         setIsAuthenticated(true);
-        console.log(res);
+        cookies.set("user", res.user, {
+          maxAge: 5 * 24 * 60 * 60 * 3600,
+          sameSite: "none",
+          secure: true
+        });
         return res;
     } catch (err) {
         return err;
@@ -42,6 +47,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     // Logic to handle user logout
+    cookies.remove("user");
     navigate('/')
     setIsAuthenticated(false);
   };

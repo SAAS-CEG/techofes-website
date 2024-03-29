@@ -51,7 +51,7 @@ const loggedin = [
 	{ id: '5', name: 'Merchandise', link: '/merchandise' },
 	{ id: '6', name: 'Sponsor', link: '/sponsors' },
 	{ id: '7', name: 'Contact', link: '/contact' },
-	{ id: '8', name: 'Logout', link: '/logout' },
+	{ id: '8', name: 'Profile', link: '/profile' },
 ]
 
 export { eventRegistrationDetails, pages, loggedin, canvasSpaceEvents };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 const { VITE_APP_BASE_URL } = import.meta.env;
 import Cookies from "universal-cookie";
@@ -16,17 +16,18 @@ const Sign_in_new = () => {
   const navigate = useNavigate();
   async function fetchData() {
     try {
+      cookies.remove("user");
       const res = await login(formData);
-      if (res.token) {
+      if (res.user) {
         const decoded = jwtDecode(res.token)
-        cookies.set("jwt_auth", decoded, {
-          expires: new Date(decoded.exp * 1000)
-        })
+        // cookies.set("jwt_auth", decoded, {
+        //   expires: new Date(decoded.exp * 1000)
+        // })
          navigate('/');
          setFormData({email: "",password: "",});
         }
         else{
-          setErrorMsg(['Wrong password/Email!'])
+          setErrorMsg(['Try Again !'])
         }
     } 
     catch (error) {
@@ -52,7 +53,7 @@ const Sign_in_new = () => {
 
   return (
     
-    <div className="flex justify-center align-items-center my-[100px] p-5 font-anta">
+    <div className="flex justify-center align-items-center my-[100px] p-5 font-anta bg-cover bg-no-repeat">
       <div className="md:w-1/3  h-full mt-4 bg-white rounded-md p-6 demo">
         <div className="flex items-center justify-center flex-col gap-2">
           <svg

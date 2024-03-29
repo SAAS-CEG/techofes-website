@@ -1,10 +1,17 @@
 import { TextField } from "@mui/material";
 import "./Contact.css";
 import { Button } from "react-daisyui";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
   return (
-    <div className="mt-20 cursor-default bg-g   break-all">
+    <div className="mt-20 cursor-default bg-g break-all">
       <div className="flex items-center justify-center p-11 text-3xl md:text-6xl text-white font-anta">
         <h1 className="font-anta font-bold">CONTACT US</h1>
       </div>

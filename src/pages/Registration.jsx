@@ -6,6 +6,12 @@ import { useForm } from 'react-hook-form';
 import { DateField } from '@mui/x-date-pickers';
 
 const Registration = () => {
+	useEffect(() => {
+		window.scrollTo({
+		  top: 0,
+		  behavior: "smooth"
+		});
+	  }, []);
 	const { register, handleSubmit, formState } = useForm();
 	const { errors } = formState;
 
