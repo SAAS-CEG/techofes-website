@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import FlipCard from "../components/FlipCard";
 import { eventRegistrationDetails } from "../constants/constants";
 import { CardActions } from "@mui/material";
+import { canvasSpaceEvents } from "../constants/constants";
 const { VITE_APP_BASE_URL } = import.meta.env;
 const Events = () => {
   function scrollToTop() {
@@ -65,8 +66,8 @@ const Events = () => {
   useEffect(() => {
     const getEventDetails = async () => {
       try {
-        const res = await getData(`${VITE_APP_BASE_URL}/api/events`);
-        let eventsFromServer = res.events;
+        // const res = await getData(`${VITE_APP_BASE_URL}/api/events`);
+        let eventsFromServer = canvasSpaceEvents;
         // let eventsFromServer = eventRegistrationDetails[0];
         let events = eventsFromServer.map((event) => ({
           id: event.e_id,
@@ -79,7 +80,7 @@ const Events = () => {
           date: event.date,
         }));
         setEventDetailsOg(events);
-        setEventDetails(events.slice(start, end));
+        setEventDetails(events);
         const count = Math.ceil(eventsFromServer.length / 6);
 
         const numbersTemp = [];
@@ -120,13 +121,13 @@ const Events = () => {
                   </h1>
                   <div className="w-full py-[10px] px-[15px]  flex items-center justify-between flex-col md:flex-row gap-[20px]">
                     <div>
-                      <p>
+                      {event.time && <p>
                         <span className="text-gray-300">Time:</span> <span className="font-semibold">{convertTime(event.time)}</span>
-                      </p>
+                      </p>}
 
-                      <p>
+                      {event.date && <p>
                         <span className="text-gray-300">Date:</span> <span className="font-semibold">{convertDate(event.date)}</span>
-                      </p>
+                      </p>}
                     </div>
                     <div>
                       {event.entry_pass != 0 && <p>
@@ -138,7 +139,7 @@ const Events = () => {
                       </p>}
                       {event.prize_money == 0 && event.entry_pass == 0 && (
                         <div className="h-[20px] "></div>
-                      )} 
+                      )}
                     </div>
                   </div>
                   <div>
@@ -159,6 +160,9 @@ const Events = () => {
                     <p className="font-unbounded font-light md:text-[16px] md:leading-5 text-[12px]">
                       {event.description}
                     </p>
+                    <div className="font-anta bg-white/[0.2] mt-[20px] py-[10px] px-[20px]">
+                      <a href="microcontest" target="_blank">Join Now</a>
+                    </div>
                     <CardActions className="w-40 flex justify-center px-6 py-2 font-semibold text-white rounded-md absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-10 scale-0 group-hover:scale-125 ">
                       {/* <RegistrationModal event={event} /> */}
                     </CardActions>
@@ -171,7 +175,7 @@ const Events = () => {
         </div>
       </div>
 
-      <div className="text-white flex items-center w-full justify-center gap-[10px]">
+      {/* <div className="text-white flex items-center w-full justify-center gap-[10px]">
         {numbers && numbers.map((page) => (
           <div
             key={page}
@@ -181,7 +185,7 @@ const Events = () => {
             {page}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

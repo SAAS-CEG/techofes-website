@@ -15,6 +15,25 @@ const eventRegistrationDetails = [
 	},
 ];
 
+const canvasSpaceEvents = [
+	{
+		e_id: 'CS01',
+		title: "Micro Film Contest",
+		image_link: "/events/canvasSpace/film_contest.jpg",
+		details: "Showcase your videography prowess by sharing your creative work in this Micro Film Contest presented by Canvas Space!",
+		entry_pass: 0,
+		prize_money: 50000
+	},
+	{
+		e_id: 'CS01',
+		title: "Micro Song Contest",
+		image_link: "/events/canvasSpace/song_contest.jpg",
+		details: "Showcase your audiography prowess by sharing your creative work in this Micro Song Contest presented by Canvas Space!",
+		entry_pass: 0,
+		prize_money: 50000
+	}
+]
+
 const pages = [
 	{ id: '1', name: 'Home', link: '/#home' },
 	{ id: '3', name: 'Events', link: '/events' },
@@ -35,4 +54,4 @@ const loggedin = [
 	{ id: '8', name: 'Logout', link: '/logout' },
 ]
 
-export { eventRegistrationDetails, pages, loggedin };
+export { eventRegistrationDetails, pages, loggedin, canvasSpaceEvents };
