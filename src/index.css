@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("/src/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  /* background-image: radial-gradient(#2f225b, #170d4d, #151543, #05092a); */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(hsl(202.42, 77%, 40%), rgb(1, 107, 131));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(4, 77, 142);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(13, 67, 114);
+}
+
+.sign_in_div {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  border-radius: 28px;
+}
+
+.demo {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  border-radius: 28px;
+}

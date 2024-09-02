@@ -1,0 +1,170 @@
+#title {
+  font-weight: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.title-text {
+  text-align: center;
+  animation: comedown 1.5s;
+  font-weight: 800;
+  font-size: 80%;
+  transition: ease-in;
+  /* background-image: radial-gradient(#2F225B,#170D4D, #151543, #05092A); */
+}
+
+@keyframes comedown {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.names {
+  background: linear-gradient(90deg, #f07654, #f5df2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  color: white;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    filter: blur(13px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+#title span {
+  background: linear-gradient(90deg, #f07654, #f5df2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+  opacity: 0;
+  animation: reveal 2.5s linear forwards;
+  font-weight: 800;
+  font-size: 80%;
+  animation-delay: 2s;
+}
+
+.main-title {
+  animation-name: slideLeft;
+  animation-duration: 3s;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes bgSlideDown {
+  from {
+    transform: translateY(-200vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.backGround {
+  animation: bgSlideDown 1s;
+}
+
+#title span:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+#title span:nth-child(2) {
+  animation-delay: calc(0.15s * 2);
+}
+
+#title span:nth-child(3) {
+  animation-delay: calc(0.15s * 3);
+}
+
+#title span:nth-child(4) {
+  animation-delay: calc(0.15s * 4);
+}
+
+#title span:nth-child(5) {
+  animation-delay: calc(0.15s * 5);
+}
+
+#title span:nth-child(6) {
+  animation-delay: calc(0.15s * 6);
+}
+
+#title span:nth-child(7) {
+  animation-delay: calc(0.15s * 7);
+}
+
+#title span:nth-child(8) {
+  animation-delay: calc(0.15s * 8);
+}
+
+#title span:nth-child(9) {
+  animation-delay: calc(0.15s * 9);
+}
+
+#title span:nth-child(10) {
+  animation-delay: calc(0.15s * 10);
+}
+
+#title span:nth-child(11) {
+  animation-delay: calc(0.15s * 11);
+}
+
+#title span:nth-child(12) {
+  animation-delay: calc(0.15s * 12);
+}
+
+#title span:nth-child(13) {
+  animation-delay: calc(0.15s * 13);
+}
+
+#title span:nth-child(14) {
+  animation-delay: calc(0.15s * 14);
+}
+
+#title span:nth-child(15) {
+  animation-delay: calc(0.15s * 15);
+}
+
+#title span:nth-child(16) {
+  animation-delay: calc(0.15s * 16);
+}
+
+#title span:nth-child(17) {
+  animation-delay: calc(0.15s * 17);
+}
+
+#title span:nth-child(18) {
+  animation-delay: calc(0.15s * 18);
+}
+
+#title span:nth-child(19) {
+  animation-delay: calc(0.15s * 19);
+}
+
+#title span:nth-child(20) {
+  animation-delay: calc(0.15s * 20);
+}
+
+#title span:nth-child(21) {
+  animation-delay: calc(0.15s * 21);
+}
+
+#title span:nth-child(22) {
+  animation-delay: calc(0.15s * 22);
+}
+
+#title span:nth-child(23) {
+  animation-delay: calc(0.15s * 22);
+}
+
+/* Paper animation */
